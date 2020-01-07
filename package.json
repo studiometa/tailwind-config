@@ -1,0 +1,19 @@
+{
+  "name": "@studiometa/tailwind-config",
+  "version": "1.0.0-alpha.0",
+  "description": "A custom Tailwind CSS config",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studiometa/tailwind-config.git"
+  },
+  "author": "Studio Meta <agence@studiometa.fr> (https://www.studiometa.fr)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/studiometa/tailwind-config/issues"
+  },
+  "homepage": "https://github.com/studiometa/tailwind-config#readme"
+}
