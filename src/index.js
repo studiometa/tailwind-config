@@ -1,5 +1,9 @@
 module.exports = {
-  theme: {},
+  theme: {
+    debugOutline: true,
+  },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('./plugins/debug-outline')()
+  ],
 };
