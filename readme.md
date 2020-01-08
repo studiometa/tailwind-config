@@ -6,6 +6,33 @@
 
 > A custom Tailwind CSS configuration.
 
+## Installation
+
+Install the package with NPM or your package manager of choice:
+
+```bash
+npm install @studiometa/tailwind-config --save-dev
+```
+
+## Usage
+
+Use the package in your project's `tailwind.config.js` file. 
+
+```js
+// As is with no custom configuration
+module.exports = require('@studiometa/tailwind-config');
+
+// By merging the package's configuration with you own custom one
+const config = require('@studiometa/tailwind-config');
+const merge = require('lodash.merge');
+
+module.exports = merge(config, {
+  theme: {
+    // ...
+  },
+});
+```
+
 ## How to and best practices
 
 ### Responsive
