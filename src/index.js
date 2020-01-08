@@ -1,6 +1,6 @@
 module.exports = {
   theme: {
-    debugOutline: true,
+    debugOutline: false,
   },
   variants: {},
   plugins: [
