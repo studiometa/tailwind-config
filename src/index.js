@@ -218,6 +218,16 @@ module.exports = {
   },
   corePlugins: {},
   plugins: [
-    require('./plugins/debug-outline')()
+    require('./plugins/debug-outline')(),
+    require('./plugins/grid')({
+      gridGutters: {
+        xs: '1',
+        s: '2',
+        m: '2',
+        l: '2',
+        xl: '4',
+        xxl: '4',
+      },
+    }),
   ],
 };
