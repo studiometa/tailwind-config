@@ -3,7 +3,7 @@
  * 
  * @package tailwind-config
  * 
- * @since 1.0.0-alpha.0
+ * @since 1.0.0-alpha.1
  * 
  * Full tailwind default config file
  * @see https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
@@ -15,7 +15,6 @@ module.exports = {
      * Breakpoints
      */
     screens: {
-      xxs: '0px',
       xs: '480px',
       s: '768px',
       m: '1024px',
@@ -114,19 +113,7 @@ module.exports = {
       full: '100%',
       screen: '100vw',
     }),
-    maxWidth: (theme, { breakpoints }) => {
-      return {
-        none: 'none',
-        xxs: '20rem',
-        s: '24rem',
-        m: '28rem',
-        l: '32rem',
-        xl: '36rem',
-        full: '100%',
-        screen: '100vw',
-        ...breakpoints(theme('screens')),
-      }
-    },
+    maxWidth: {},
     minWidth: {},
     height: theme => ({
       auto: 'auto',
@@ -154,7 +141,9 @@ module.exports = {
      */
     zIndex: {
       goku: '9000',
+      above: '2',
       default: '1',
+      under: '-1',
       limbo: '-999',
     },
 
