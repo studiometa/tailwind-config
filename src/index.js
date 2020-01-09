@@ -12,6 +12,11 @@
 module.exports = {
   theme: {
     /**
+     * Debug
+     */
+    debugOutline: false,
+
+    /**
      * Breakpoints
      */
     screens: {
@@ -212,5 +217,7 @@ module.exports = {
     zIndex: ['responsive'],
   },
   corePlugins: {},
-  plugins: [],
+  plugins: [
+    require('./plugins/debug-outline')()
+  ],
 };
