@@ -1,13 +1,13 @@
 /**
  * Studio Meta tailwind-config
- * 
+ *
  * @package tailwind-config
- * 
+ *
  * @since 1.0.0-alpha.1
- * 
+ *
  * Full tailwind default config file
  * @see https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
- * 
+ *
  */
 module.exports = {
   theme: {
@@ -40,18 +40,18 @@ module.exports = {
     backgroundColor: theme => theme('colors'),
     fill: theme => ({
       ...theme('colors'),
-      current: 'currentColor'
+      current: 'currentColor',
     }),
     borderColor: theme => theme('colors'),
     placeholderColor: theme => theme('colors'),
     stroke: theme => ({
       ...theme('colors'),
-      current: 'currentColor'
+      current: 'currentColor',
     }),
 
     /**
      * Spacing
-     */ 
+     */
     spacing: {
       auto: 'auto',
       0: '0',
@@ -67,7 +67,7 @@ module.exports = {
       ...negative(theme('spacing')),
     }),
     padding: theme => theme('spacing'),
-    
+
     /**
      * Flex
      */
@@ -108,7 +108,7 @@ module.exports = {
     listStyleType: {},
     inset: {},
 
-    /** 
+    /**
      * Size
      */
     container: {},
@@ -160,10 +160,10 @@ module.exports = {
     objectPosition: {},
     opacity: {},
     strokeWidth: {},
-    
+
     /**
      * css grid
-     */ 
+     */
     gap: {},
     rowGap: {},
     columnGap: {},
