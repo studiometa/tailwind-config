@@ -1,3 +1,6 @@
 module.exports = {
-	extends: ['@studiometa/eslint-config']
-}
+  extends: ['@studiometa/eslint-config'],
+  rules: {
+    'global-require': 'off',
+  },
+};
