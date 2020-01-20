@@ -1,10 +1,11 @@
 {
   "name": "@studiometa/tailwind-config",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "A custom Tailwind CSS config",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run lint",
+    "lint": "eslint src/"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,24 @@
   "bugs": {
     "url": "https://github.com/studiometa/tailwind-config/issues"
   },
-  "homepage": "https://github.com/studiometa/tailwind-config#readme"
+  "homepage": "https://github.com/studiometa/tailwind-config#readme",
+  "devDependencies": {
+    "@studiometa/eslint-config": "^2.0.1",
+    "@studiometa/prettier-config": "^2.0.0",
+    "eslint": "^6.8.0",
+    "husky": "^4.0.0",
+    "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "dependencies": {
+    "lodash.max": "^4.0.1",
+    "lodash.range": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=8.3.0"
+  }
 }
