@@ -90,8 +90,6 @@ module.exports = {
     /**
      * Typography
      */
-    fontFamily: {},
-    fontSize: {},
     fontWeight: {
       hairline: '100',
       thin: '200',
@@ -103,43 +101,22 @@ module.exports = {
       extrabold: '800',
       black: '900',
     },
-    letterSpacing: {},
-    lineHeight: {},
-    listStyleType: {},
-    inset: {},
 
     /**
      * Size
      */
-    container: {},
     width: theme => ({
       auto: 'auto',
       ...theme('spacing'),
       full: '100%',
       screen: '100vw',
     }),
-    maxWidth: {},
-    minWidth: {},
     height: theme => ({
       auto: 'auto',
       ...theme('spacing'),
       full: '100%',
       screen: '100vh',
     }),
-    maxHeight: {},
-    minHeight: {},
-
-    /**
-     * Backgrounds utilities
-     */
-    backgroundPosition: {},
-    backgroundSize: {},
-
-    /**
-     * Border utilities
-     */
-    borderRadius: {},
-    borderWidth: {},
 
     /**
      * Layer
@@ -153,36 +130,8 @@ module.exports = {
     },
 
     /**
-     * Other
-     */
-    boxShadow: {},
-    cursor: {},
-    objectPosition: {},
-    opacity: {},
-    strokeWidth: {},
-
-    /**
-     * css grid
-     */
-    gap: {},
-    rowGap: {},
-    columnGap: {},
-    gridTemplateColumns: {},
-    gridColumn: {},
-    gridColumnStart: {},
-    gridColumnEnd: {},
-    gridTemplateRows: {},
-    gridRow: {},
-    gridRowStart: {},
-    gridRowEnd: {},
-
-    /**
      * Transforms
      */
-    rotate: {},
-    scale: {},
-    skew: {},
-    transformOrigin: {},
     translate: (theme, { negative }) => ({
       ...theme('spacing'),
       ...negative(theme('spacing')),
@@ -216,7 +165,6 @@ module.exports = {
     visibility: ['responsive'],
     zIndex: ['responsive'],
   },
-  corePlugins: {},
   plugins: [
     require('./plugins/debug-outline')(),
     require('./plugins/grid')({
