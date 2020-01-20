@@ -1,6 +1,6 @@
 {
   "name": "@studiometa/tailwind-config",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "A custom Tailwind CSS config",
   "main": "src/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/studiometa/tailwind-config#readme",
   "devDependencies": {
-    "@studiometa/eslint-config": "^2.0.1",
+    "@studiometa/eslint-config": "^2.0.3",
     "@studiometa/prettier-config": "^2.0.0",
     "eslint": "^6.8.0",
     "husky": "^4.0.0",
