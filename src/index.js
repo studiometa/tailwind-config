@@ -55,11 +55,11 @@ module.exports = {
     spacing: {
       auto: 'auto',
       0: '0',
-      1: '1',
-      2: '2',
-      4: '4',
-      8: '8',
-      16: '16',
+      1: '1rem',
+      2: '2rem',
+      4: '4rem',
+      8: '8rem',
+      16: '16rem',
     },
     margin: (theme, { negative }) => ({
       auto: 'auto',
