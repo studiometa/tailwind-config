@@ -4,7 +4,8 @@
   "description": "A custom Tailwind CSS config",
   "main": "src/index.js",
   "scripts": {
-    "test": "npm run lint",
+    "test": "npm run lint && npm run test-build && echo 'All test passed! 🎉\n' && exit 0",
+    "test-build": "if gulp styles-build -q 2>&1 >/dev/null | tee tmp | grep -q 'Error'; then cat tmp && rm tmp && exit 1; else rm tmp && exit 0; fi;",
     "lint": "eslint src/"
   },
   "repository": {
@@ -19,10 +20,12 @@
   "homepage": "https://github.com/studiometa/tailwind-config#readme",
   "devDependencies": {
     "@studiometa/eslint-config": "^2.0.3",
+    "@studiometa/gulp-config": "^1.4.1",
     "@studiometa/prettier-config": "^2.0.0",
     "eslint": "^6.8.0",
     "husky": "^4.0.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "tailwindcss": "^1.1.4"
   },
   "husky": {
     "hooks": {
