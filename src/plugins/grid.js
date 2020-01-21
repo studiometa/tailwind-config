@@ -23,35 +23,34 @@ module.exports = function gridPlugin({
 }) {
   return function addGridUtilities({ addUtilities, theme, e }) {
     /**
-     * Add utilities without variants
+     * Per breakpoint rules, string matching keys from theme('screens') & gridGutters
      */
     addUtilities([
-      /**
-       * Per breakpoint rules, string matching keys from theme('screens') & gridGutters
-       */
-      ...Object.keys(theme('screens')).map(breakpoint => ({
-        /**
-         * Add padding's to .grid
-         */
-        [`.${e(`${breakpoint}:grid`)}`]: {
-          paddingRight: gridGutters[breakpoint] * 0.5 + gridGutterUnit,
-          paddingLeft: gridGutters[breakpoint] * 0.5 + gridGutterUnit,
-        },
+      ...Object.keys(theme('screens')).map(key => ({
+        [`@media (min-width: ${theme('screens')[key]})`]: {
+          /**
+           * Add padding's to .grid
+           */
+          '.grid': {
+            paddingRight: gridGutters[key] * 0.5 + gridGutterUnit,
+            paddingLeft: gridGutters[key] * 0.5 + gridGutterUnit,
+          },
 
-        /**
-         * Add margin's to .grid-row
-         */
-        [`.${e(`${breakpoint}:grid-row`)}`]: {
-          marginRight: gridGutters[breakpoint] * -0.5 + gridGutterUnit,
-          marginLeft: gridGutters[breakpoint] * -0.5 + gridGutterUnit,
-        },
+          /**
+           * Add margin's to .grid-row
+           */
+          '.grid-row': {
+            marginRight: gridGutters[key] * -0.5 + gridGutterUnit,
+            marginLeft: gridGutters[key] * -0.5 + gridGutterUnit,
+          },
 
-        /**
-         * Add padding's to .grid-col-{number}
-         */
-        [`.${e(`[class*=${breakpoint}:'grid-col-']`)}`]: {
-          paddingRight: gridGutters[breakpoint] * 0.5 + gridGutterUnit,
-          paddingLeft: gridGutters[breakpoint] * 0.5 + gridGutterUnit,
+          /**
+           * Add padding's to .grid-col-{number}
+           */
+          '.[class*="grid-col-"]': {
+            paddingRight: gridGutters[key] * 0.5 + gridGutterUnit,
+            paddingLeft: gridGutters[key] * 0.5 + gridGutterUnit,
+          },
         },
       })),
     ]);
