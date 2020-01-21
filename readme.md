@@ -270,3 +270,15 @@ The `theme()` function allows us to access the values entered in our configurati
   background-color: theme('colors.blue.500');
 }
 ```
+
+## Contributing
+
+This project uses [Git Flow](https://github.com/petervanderdoes/gitflow-avh) as a branching model and a combo of [ESlint](https://eslint.org/) and [Prettier](https://prettier.io/) to lint the JS files. You can lint your modifications when contributing with the following commands:
+
+```bash
+# Lint all files in the src/ folder
+$ npm run lint
+
+# Lint files and test build files
+$ npm run test
+```
