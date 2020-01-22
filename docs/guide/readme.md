@@ -37,13 +37,13 @@ module.exports = merge(config, {
 Tailwind uses a mobile first breakpoint system. It is recommended to use the utility classes unprefixed to target mobile and override them at larger breakpoints.
 
 ```html
-<div class="text-center sm:text-left md:text-right"></div>
+<div class="text-center s:text-left m:text-right"></div>
 ```
 
 For behaviors related to a **specific breakpoint** it is recommended to undo this behavior by using a utility class that reapplies the basic behavior on a larger breakpoint.
 
 ```html
-<div class="bg-teal md:bg-red lg:bg-teal"></div>
+<div class="bg-teal m:bg-red l:bg-teal"></div>
 ```
 
 ### Custom utility classes
@@ -158,7 +158,7 @@ The `@apply` directive cannot be used for statements about elements states or el
 ```scss
 .btn {
   @apply hover:bg-blue-500;
-  @apply md:inline-block;
+  @apply m:inline-block;
 }
 ```
 
@@ -227,15 +227,15 @@ This will generate the following CSS:
 
 /* ... */
 
-@media (min-width: 640px) {
-  .sm\:bg-gradient-brand {
+@media (min-width: 768px) {
+  .s\:bg-gradient-brand {
     background-image: linear-gradient(blue, green);
   }
   /* ... */
 }
 
-@media  (min-width: 768px) {
-  .md\:bg-gradient-brand {
+@media  (min-width: 1024px) {
+  .m\:bg-gradient-brand {
     background-image: linear-gradient(blue, green);
   }
   /* ... */
@@ -246,10 +246,10 @@ This will generate the following CSS:
 
 #### [@screen](https://tailwindcss.com/docs/functions-and-directives/#screen)
 
-Instead of writing media queries with pixel values it is possible to use the `@screen` directive and refer to a breakpoint by its name. If we have a breakpoint **sm** at **640px** it's possible to use it in the following way:
+Instead of writing media queries with pixel values it is possible to use the `@screen` directive and refer to a breakpoint by its name. If we have a breakpoint **s** at **768px** it's possible to use it in the following way:
 
 ```scss
-@screen sm {
+@screen s {
   /* ... */
 }
 ```
