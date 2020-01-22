@@ -96,7 +96,7 @@ You can read the documentation on [variants management](https://tailwindcss.com/
 
 We can add custom utilities with plugin. The following example generates the same classes as in the first method:
 
-```
+```js
 // tailwind.config.js
 module.exports = {
   plugins: [
