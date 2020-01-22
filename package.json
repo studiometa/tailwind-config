@@ -21,12 +21,13 @@
   "homepage": "https://github.com/studiometa/tailwind-config#readme",
   "devDependencies": {
     "@studiometa/eslint-config": "^2.0.3",
-    "@studiometa/gulp-config": "^1.4.1",
+    "@studiometa/gulp-config": "^1.5.0-beta.25",
     "@studiometa/prettier-config": "^2.0.0",
     "@studiometa/stylelint-config": "^1.2.3",
     "eslint": "^6.8.0",
     "husky": "^4.0.0",
     "prettier": "^1.19.1",
+    "stylelint": "^13.0.0",
     "tailwindcss": "^1.1.4"
   },
   "husky": {

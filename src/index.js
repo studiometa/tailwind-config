@@ -169,11 +169,12 @@ module.exports = {
     require('./plugins/debug-outline')(),
     require('./plugins/grid')({
       gridGutters: {
+        default: '1',
         xs: '1',
         s: '2',
         m: '2',
-        l: '2',
-        xl: '4',
+        l: '3',
+        xl: '3',
         xxl: '4',
       },
     }),
