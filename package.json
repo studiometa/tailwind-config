@@ -7,7 +7,9 @@
     "test": "npm run lint && npm run stylelint && npm run test-build && echo 'All test passed! 🎉\n' && exit 0",
     "test-build": "if gulp styles-build -q 2>&1 >/dev/null | tee tmp | grep -q 'Error'; then cat tmp && rm tmp && exit 1; else rm tmp && exit 0; fi;",
     "lint": "eslint src/",
-    "stylelint": "stylelint 'tests/src/**/*.scss'"
+    "stylelint": "stylelint 'tests/src/**/*.scss'",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,11 @@
     "husky": "^4.0.0",
     "prettier": "^1.19.1",
     "stylelint": "^13.0.0",
-    "tailwindcss": "^1.1.4"
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "tailwindcss": "^1.1.4",
+    "to-string-loader": "^1.1.6",
+    "vuepress": "^1.2.0"
   },
   "husky": {
     "hooks": {
