@@ -1,6 +1,6 @@
 {
   "name": "@studiometa/tailwind-config",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "A custom Tailwind CSS config",
   "main": "src/index.js",
   "scripts": {
@@ -43,7 +43,8 @@
   },
   "dependencies": {
     "lodash.max": "^4.0.1",
-    "lodash.range": "^3.2.0"
+    "lodash.range": "^3.2.0",
+    "tailwindcss-typography": "^2.2.0"
   },
   "engines": {
     "node": ">=8.3.0"
