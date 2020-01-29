@@ -16,6 +16,7 @@ module.exports = {
         items: [
           { text: 'Debug outline', link: '/plugins/debug-outline/' },
           { text: 'Grid', link: '/plugins/grid/' },
+          { text: 'Typography', link: '/plugins/typography/' },
         ],
       },
       { text: 'Github', link: 'https://github.com/studiometa/tailwind-config' },
