@@ -211,35 +211,37 @@ module.exports = function gridPluginFactory() {
           })),
         ],
       },
-      ...Object.keys(screens).map(breakpoint => ({
-        /**
-         * Declare the @media query rule
-         */
-        [`@screen ${breakpoint}`]: {
+      ...Object.keys(screens)
+        .filter(breakpoint => breakpoint in gutterWidth)
+        .map(breakpoint => ({
           /**
-           * Add padding's to .grid
+           * Declare the @media query rule
            */
-          '.grid': {
-            paddingRight: gutterWidth[breakpoint] * 0.5 + gutterUnit,
-            paddingLeft: gutterWidth[breakpoint] * 0.5 + gutterUnit,
-          },
-          /**
-           * Add margin's to .grid-row
-           */
-          '.grid-row': {
-            marginRight: gutterWidth[breakpoint] * -0.5 + gutterUnit,
-            marginLeft: gutterWidth[breakpoint] * -0.5 + gutterUnit,
-          },
+          [`@screen ${breakpoint}`]: {
+            /**
+             * Add padding's to .grid
+             */
+            '.grid': {
+              paddingRight: gutterWidth[breakpoint] * 0.5 + gutterUnit,
+              paddingLeft: gutterWidth[breakpoint] * 0.5 + gutterUnit,
+            },
+            /**
+             * Add margin's to .grid-row
+             */
+            '.grid-row': {
+              marginRight: gutterWidth[breakpoint] * -0.5 + gutterUnit,
+              marginLeft: gutterWidth[breakpoint] * -0.5 + gutterUnit,
+            },
 
-          /**
-           * Add padding's to .grid-col-{number}
-           */
-          [`[class*="grid-col-"]`]: {
-            paddingRight: gutterWidth[breakpoint] * 0.5 + gutterUnit,
-            paddingLeft: gutterWidth[breakpoint] * 0.5 + gutterUnit,
+            /**
+             * Add padding's to .grid-col-{number}
+             */
+            [`[class*="grid-col-"]`]: {
+              paddingRight: gutterWidth[breakpoint] * 0.5 + gutterUnit,
+              paddingLeft: gutterWidth[breakpoint] * 0.5 + gutterUnit,
+            },
           },
-        },
-      })),
+        })),
     ]);
   };
 };
