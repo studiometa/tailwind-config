@@ -10,18 +10,21 @@ const max = require('lodash.max');
  * - How to create tailwind plugins
  * @see https://tailwindcss.com/docs/plugins/
  *
- * @param {array}  columnCount    Number of columns to have in the grid, default is 12
- * @param {object} gridGutters    Per breakpoint grid gutter size value
- * @param {string} gridGutterUnit Unit to use for the grid gutter size, default is rem
  * @param {array}  variants
  */
-module.exports = function gridPlugin({
-  columnCount = range(1, 12),
-  gridGutters,
-  gridGutterUnit = 'rem',
-}) {
-  return ({ addComponents, theme }) => {
+module.exports = function gridPluginFactory() {
+  return function gridPlugin({ addComponents, theme }) {
     const screens = theme('screens', {});
+    const columns = range(1, theme('gridPlugin.columns', 12));
+    const gutterUnit = theme('gridPlugin.gutterUnit', 'rem');
+    let gutterWidth = theme('gridPlugin.gutterWidth', 1);
+
+    // Transform `gutterWidth` into an object if define as a string or number
+    if (typeof gutterWidth === 'string' || typeof gutterWidth === 'number') {
+      gutterWidth = {
+        default: gutterWidth,
+      };
+    }
 
     addComponents([
       {
@@ -29,23 +32,23 @@ module.exports = function gridPlugin({
          * Add padding's to .grid
          */
         '.grid': {
-          paddingRight: gridGutters.default * 0.5 + gridGutterUnit,
-          paddingLeft: gridGutters.default * 0.5 + gridGutterUnit,
+          paddingRight: gutterWidth.default * 0.5 + gutterUnit,
+          paddingLeft: gutterWidth.default * 0.5 + gutterUnit,
         },
         /**
          * Add margin's to .grid-row
          */
         '.grid-row': {
-          marginRight: gridGutters.default * -0.5 + gridGutterUnit,
-          marginLeft: gridGutters.default * -0.5 + gridGutterUnit,
+          marginRight: gutterWidth.default * -0.5 + gutterUnit,
+          marginLeft: gutterWidth.default * -0.5 + gutterUnit,
         },
 
         /**
          * Add padding's to .grid-col-{number}
          */
         '[class*="grid-col-"]': {
-          paddingRight: gridGutters.default * 0.5 + gridGutterUnit,
-          paddingLeft: gridGutters.default * 0.5 + gridGutterUnit,
+          paddingRight: gutterWidth.default * 0.5 + gutterUnit,
+          paddingLeft: gutterWidth.default * 0.5 + gutterUnit,
         },
         /**
          * Responsive classes
@@ -179,9 +182,9 @@ module.exports = function gridPlugin({
            * Column pull
            * grid-pull-{number}
            */
-          ...range(1, max(columnCount) + 2).map(count => ({
+          ...range(1, max(columns) + 2).map(count => ({
             [`.grid-pull-${count}`]: {
-              marginLeft: `${(count * -100) / (max(columnCount) + 1)}%`,
+              marginLeft: `${(count * -100) / (max(columns) + 1)}%`,
             },
           })),
 
@@ -189,9 +192,9 @@ module.exports = function gridPlugin({
            * Column push
            * grid-push-{number}
            */
-          ...range(1, max(columnCount) + 2).map(count => ({
+          ...range(1, max(columns) + 2).map(count => ({
             [`.grid-push-${count}`]: {
-              marginLeft: `${(count * 100) / (max(columnCount) + 1)}%`,
+              marginLeft: `${(count * 100) / (max(columns) + 1)}%`,
             },
           })),
 
@@ -199,11 +202,11 @@ module.exports = function gridPlugin({
            * Column size
            * grid-col-{number}
            */
-          ...range(1, max(columnCount) + 2).map(count => ({
+          ...range(1, max(columns) + 2).map(count => ({
             [`.grid-col-${count}`]: {
               float: 'left',
               display: 'block',
-              width: `${(count * 100) / (max(columnCount) + 1)}%`,
+              width: `${(count * 100) / (max(columns) + 1)}%`,
             },
           })),
         ],
@@ -217,23 +220,23 @@ module.exports = function gridPlugin({
            * Add padding's to .grid
            */
           '.grid': {
-            paddingRight: gridGutters[breakpoint] * 0.5 + gridGutterUnit,
-            paddingLeft: gridGutters[breakpoint] * 0.5 + gridGutterUnit,
+            paddingRight: gutterWidth[breakpoint] * 0.5 + gutterUnit,
+            paddingLeft: gutterWidth[breakpoint] * 0.5 + gutterUnit,
           },
           /**
            * Add margin's to .grid-row
            */
           '.grid-row': {
-            marginRight: gridGutters[breakpoint] * -0.5 + gridGutterUnit,
-            marginLeft: gridGutters[breakpoint] * -0.5 + gridGutterUnit,
+            marginRight: gutterWidth[breakpoint] * -0.5 + gutterUnit,
+            marginLeft: gutterWidth[breakpoint] * -0.5 + gutterUnit,
           },
 
           /**
            * Add padding's to .grid-col-{number}
            */
           [`[class*="grid-col-"]`]: {
-            paddingRight: gridGutters[breakpoint] * 0.5 + gridGutterUnit,
-            paddingLeft: gridGutters[breakpoint] * 0.5 + gridGutterUnit,
+            paddingRight: gutterWidth[breakpoint] * 0.5 + gutterUnit,
+            paddingLeft: gutterWidth[breakpoint] * 0.5 + gutterUnit,
           },
         },
       })),
