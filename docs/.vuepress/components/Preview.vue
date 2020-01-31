@@ -5,7 +5,7 @@
     </div>
     <div
       :style="{
-        height: `${iframeHeight * iframeScale}px`
+        height: `${iframeHeight}px`
       }">
       <div class="preview__loader" v-if="isLoading" />
       <iframe
@@ -66,14 +66,6 @@ import { log } from 'util';
             </body>
           </html>
         `;
-      },
-    },
-    watch: {
-      /**
-       * Update the iframe sizes when the iframe scale changes
-       */
-      iframeScale() {
-        this.setIframeHeight();
       },
     },
     async mounted() {
