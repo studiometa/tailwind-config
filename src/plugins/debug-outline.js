@@ -3,9 +3,9 @@
  *
  * @package @studiometa/tailwind-config
  */
-module.exports = function debugOutline() {
-  return function addDebugOutlineBase({ addBase, theme }) {
-    if (theme('debugOutline')) {
+module.exports = function debugOutlinePluginFactory() {
+  return function debugOutlinePlugin({ addBase, theme }) {
+    if (theme('debugOutline', false)) {
       addBase([
         {
           '.debug': {
