@@ -1,5 +1,7 @@
 ---
 sidebar: auto
+prev: ./grid.html
+next: false
 ---
 
 # Typography <Badge>Third party</Badge>
