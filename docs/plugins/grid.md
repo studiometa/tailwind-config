@@ -12,13 +12,14 @@ The grid plugin creates component classes to easily work with a 12 columns layou
 
 The plugin can be configured with the `theme.gridPlugin` property:
 
-```js{3-7}
+```js{3-8}
 module.exports = {
   theme: {
     gridPlugin: {
       columns: 12,
       gutterWidth: 1,
       gutterUnit: 'rem',
+      prefix: 'c-',
     },
   },
 };
@@ -73,38 +74,45 @@ module.exports = {
 
 The CSS unit used for the gutters.
 
+### `prefix`
+
+- Type: `String`
+- Default : `'c-'`
+
+The prefix used by the plugin to prevent conflicts with other classes. It defaults to `c-` as this plugin adds **component** classes.
+
 ## Classes
 
 ### Container
 
 |       Class       | Description | Variants |
 |-------------------|-------------|----------|
-| `.grid`           | @todo       | `[]`     |
-| `.grid-nested`    | @todo       | `[]`     |
-| `.grid-no-gutter` | @todo       | `[]`     |
+| `.c-grid`           | @todo       | `[]`     |
+| `.c-grid-nested`    | @todo       | `[]`     |
+| `.c-grid-no-gutter` | @todo       | `[]`     |
 
 ### Row
 
 |        Class        | Description |   Variants   |
 |---------------------|-------------|--------------|
-| `.grid-row`         | @todo       | `responsive` |
-| `.grid-row-start`   | @todo       | `responsive` |
-| `.grid-row-center`  | @todo       | `responsive` |
-| `.grid-row-end`     | @todo       | `responsive` |
-| `.grid-row-stretch` | @todo       | `responsive` |
+| `.c-grid-row`         | @todo       | `responsive` |
+| `.c-grid-row-start`   | @todo       | `responsive` |
+| `.c-grid-row-center`  | @todo       | `responsive` |
+| `.c-grid-row-end`     | @todo       | `responsive` |
+| `.c-grid-row-stretch` | @todo       | `responsive` |
 
 ### Columns
 
 |        Class         | Description |   Variants   |
 |----------------------|-------------|--------------|
-| `.grid-pull-<count>` | @todo       | `responsive` |
-| `.grid-push-<count>` | @todo       | `responsive` |
-| `.grid-col-<count>`  | @todo       | `responsive` |
-| `.grid-col-center`   | @todo       | `responsive` |
-| `.grid-col-clear`    | @todo       | `responsive` |
-| `.grid-col-left`     | @todo       | `responsive` |
-| `.grid-col-no-clear` | @todo       | `responsive` |
-| `.grid-col-right`    | @todo       | `responsive` |
+| `.c-grid-pull-<count>` | @todo       | `responsive` |
+| `.c-grid-push-<count>` | @todo       | `responsive` |
+| `.c-grid-col-<count>`  | @todo       | `responsive` |
+| `.c-grid-col-center`   | @todo       | `responsive` |
+| `.c-grid-col-clear`    | @todo       | `responsive` |
+| `.c-grid-col-left`     | @todo       | `responsive` |
+| `.c-grid-col-no-clear` | @todo       | `responsive` |
+| `.c-grid-col-right`    | @todo       | `responsive` |
 
 
 ## Examples
@@ -112,203 +120,201 @@ The CSS unit used for the gutters.
 ### Simple
 
 <Preview>
-  <div class="debug">
-    <div class="grid">
-      <div class="grid-row mb-2">
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
+  <div class="c-grid">
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-3">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
-        </div>
-        <div class="grid-col-3">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
-        </div>
-        <div class="grid-col-3">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
-        </div>
-        <div class="grid-col-3">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-4">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
-        </div>
-        <div class="grid-col-4">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
-        </div>
-        <div class="grid-col-4">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-6">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
-        </div>
-        <div class="grid-col-6">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-12">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-3">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
+      </div>
+      <div class="c-grid-col-3">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
+      </div>
+      <div class="c-grid-col-3">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
+      </div>
+      <div class="c-grid-col-3">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-4">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
+      </div>
+      <div class="c-grid-col-4">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
+      </div>
+      <div class="c-grid-col-4">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-6">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
+      </div>
+      <div class="c-grid-col-6">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-12">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
       </div>
     </div>
   </div>
 </Preview>
 
 ```html
-<div class="grid">
-  <div class="grid-row mb-2">
-    <div class="grid-col-1">
+<div class="c-grid">
+  <div class="c-grid-row mb-2">
+    <div class="c-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="grid-col-1">
+    <div class="c-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="grid-col-1">
+    <div class="c-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="grid-col-1">
+    <div class="c-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="grid-col-1">
+    <div class="c-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="grid-col-1">
+    <div class="c-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="grid-col-1">
+    <div class="c-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="grid-col-1">
+    <div class="c-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="grid-col-1">
+    <div class="c-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="grid-col-1">
+    <div class="c-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="grid-col-1">
+    <div class="c-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="grid-col-1">
+    <div class="c-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
   </div>
-  <div class="grid-row mb-2">
-    <div class="grid-col-2">
+  <div class="c-grid-row mb-2">
+    <div class="c-grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="grid-col-2">
+    <div class="c-grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="grid-col-2">
+    <div class="c-grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="grid-col-2">
+    <div class="c-grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="grid-col-2">
+    <div class="c-grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="grid-col-2">
+    <div class="c-grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
   </div>
-  <div class="grid-row mb-2">
-    <div class="grid-col-3">
+  <div class="c-grid-row mb-2">
+    <div class="c-grid-col-3">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
     </div>
-    <div class="grid-col-3">
+    <div class="c-grid-col-3">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
     </div>
-    <div class="grid-col-3">
+    <div class="c-grid-col-3">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
     </div>
-    <div class="grid-col-3">
+    <div class="c-grid-col-3">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
     </div>
   </div>
-  <div class="grid-row mb-2">
-    <div class="grid-col-4">
+  <div class="c-grid-row mb-2">
+    <div class="c-grid-col-4">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
     </div>
-    <div class="grid-col-4">
+    <div class="c-grid-col-4">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
     </div>
-    <div class="grid-col-4">
+    <div class="c-grid-col-4">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
     </div>
   </div>
-  <div class="grid-row mb-2">
-    <div class="grid-col-6">
+  <div class="c-grid-row mb-2">
+    <div class="c-grid-col-6">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
     </div>
-    <div class="grid-col-6">
+    <div class="c-grid-col-6">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
     </div>
   </div>
-  <div class="grid-row mb-2">
-    <div class="grid-col-12">
+  <div class="c-grid-row mb-2">
+    <div class="c-grid-col-12">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
     </div>
   </div>
@@ -318,110 +324,108 @@ The CSS unit used for the gutters.
 ### No gutter
 
 <Preview>
-  <div class="debug">
-    <div class="grid grid-no-gutter">
-      <div class="grid-row mb-2">
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
+  <div class="c-grid c-grid-no-gutter">
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-3">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
-        </div>
-        <div class="grid-col-3">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
-        </div>
-        <div class="grid-col-3">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
-        </div>
-        <div class="grid-col-3">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-4">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
-        </div>
-        <div class="grid-col-4">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
-        </div>
-        <div class="grid-col-4">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-6">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
-        </div>
-        <div class="grid-col-6">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-12">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-3">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
+      </div>
+      <div class="c-grid-col-3">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
+      </div>
+      <div class="c-grid-col-3">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
+      </div>
+      <div class="c-grid-col-3">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-4">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
+      </div>
+      <div class="c-grid-col-4">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
+      </div>
+      <div class="c-grid-col-4">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-6">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
+      </div>
+      <div class="c-grid-col-6">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-12">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
       </div>
     </div>
   </div>
 </Preview>
 
 ```html
-<div class="grid grid-no-gutter">
+<div class="c-grid c-grid-no-gutter">
   ...
 </div>
 ```
@@ -429,110 +433,108 @@ The CSS unit used for the gutters.
 ### Nested
 
 <Preview>
-  <div class="debug">
-    <div class="grid grid-nested">
-      <div class="grid-row mb-2">
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
-        <div class="grid-col-1">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
-        </div>
+  <div class="c-grid c-grid-nested">
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
-        <div class="grid-col-2">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-3">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
-        </div>
-        <div class="grid-col-3">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
-        </div>
-        <div class="grid-col-3">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
-        </div>
-        <div class="grid-col-3">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-4">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
-        </div>
-        <div class="grid-col-4">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
-        </div>
-        <div class="grid-col-4">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-6">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
-        </div>
-        <div class="grid-col-6">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="grid-row mb-2">
-        <div class="grid-col-12">
-          <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
-        </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="c-grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+      <div class="c-grid-col-2">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-3">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
+      </div>
+      <div class="c-grid-col-3">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
+      </div>
+      <div class="c-grid-col-3">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
+      </div>
+      <div class="c-grid-col-3">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-4">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
+      </div>
+      <div class="c-grid-col-4">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
+      </div>
+      <div class="c-grid-col-4">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-6">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
+      </div>
+      <div class="c-grid-col-6">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
+      </div>
+    </div>
+    <div class="c-grid-row mb-2">
+      <div class="c-grid-col-12">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
       </div>
     </div>
   </div>
 </Preview>
 
 ```html
-<div class="grid grid-nested">
+<div class="c-grid c-grid-nested">
   ...
 </div>
 ```
