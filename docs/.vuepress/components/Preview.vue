@@ -87,7 +87,7 @@ import { log } from 'util';
        * @return {String} The CSS to be inserted in the iframe
        */
       async getStyles() {
-        const styles = await import('!to-string-loader!css-loader!postcss-loader!sass-loader!../assets/scss/tailwind.config.scss');
+        const styles = await import('!to-string-loader!css-loader!postcss-loader!../assets/scss/tailwind.config.css');
 
         return styles.default;
       },
