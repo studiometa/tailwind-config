@@ -62,24 +62,6 @@ module.exports = {
     }),
 
     /**
-     * Spacing
-     */
-    spacing: {
-      0: '0',
-      1: '0.5rem',
-      2: '1rem',
-      4: '2rem',
-      8: '4rem',
-      16: '8rem',
-    },
-    margin: (theme, { negative }) => ({
-      auto: 'auto',
-      ...theme('spacing'),
-      ...negative(theme('spacing')),
-    }),
-    padding: theme => theme('spacing'),
-
-    /**
      * Size
      */
     width: theme => ({
