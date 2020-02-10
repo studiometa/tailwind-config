@@ -81,11 +81,6 @@ module.exports = {
     padding: theme => theme('spacing'),
 
     /**
-     * Flex
-     */
-    order: {},
-
-    /**
      * Size
      */
     width: theme => ({
