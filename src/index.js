@@ -65,7 +65,6 @@ module.exports = {
      * Spacing
      */
     spacing: {
-      auto: 'auto',
       0: '0',
       1: '0.5rem',
       2: '1rem',
