@@ -62,22 +62,6 @@ module.exports = {
     }),
 
     /**
-     * Size
-     */
-    width: theme => ({
-      auto: 'auto',
-      ...theme('spacing'),
-      full: '100%',
-      screen: '100vw',
-    }),
-    height: theme => ({
-      auto: 'auto',
-      ...theme('spacing'),
-      full: '100%',
-      screen: '100vh',
-    }),
-
-    /**
      * Layer
      */
     zIndex: {
