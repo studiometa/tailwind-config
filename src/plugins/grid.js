@@ -19,7 +19,7 @@ module.exports = function gridPluginFactory() {
     const columns = range(1, theme('gridPlugin.columns', 12));
     const gutterUnit = theme('gridPlugin.gutterUnit', 'rem');
     let gutterWidth = theme('gridPlugin.gutterWidth', 1);
-    const prefixValue = theme('gridPlugin.prefix', 'c-');
+    const prefixValue = theme('gridPlugin.prefix', '');
     const prefix = selector => prefixSelector(prefixValue, selector);
 
     // Transform `gutterWidth` into an object if define as a string or number

@@ -8,7 +8,7 @@ const { default: prefixSelector } = require('tailwindcss/lib/util/prefixSelector
 module.exports = function debugOutlinePluginFactory() {
   return function debugOutlinePlugin({ addComponents, theme }) {
     const debug = theme('debugOutline', false);
-    const prefixValue = theme('debugOutline.prefix', 'c-');
+    const prefixValue = theme('debugOutline.prefix', '');
     const prefix = selector => prefixSelector(prefixValue, selector);
 
     if (!debug) {

@@ -77,9 +77,9 @@ The CSS unit used for the gutters.
 ### `prefix`
 
 - Type: `String`
-- Default : `'c-'`
+- Default : `''`
 
-The prefix used by the plugin to prevent conflicts with other classes. It defaults to `c-` as this plugin adds **component** classes.
+The prefix used by the plugin to prevent conflicts with other classes. It defaults to an empty string.
 
 ## Classes
 
@@ -87,32 +87,32 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
 
 |       Class       | Description | Variants |
 |-------------------|-------------|----------|
-| `.c-grid`           | @todo       | `[]`     |
-| `.c-grid-nested`    | @todo       | `[]`     |
-| `.c-grid-no-gutter` | @todo       | `[]`     |
+| `.grid`           | @todo       | `[]`     |
+| `.grid-nested`    | @todo       | `[]`     |
+| `.grid-no-gutter` | @todo       | `[]`     |
 
 ### Row
 
 |        Class        | Description |   Variants   |
 |---------------------|-------------|--------------|
-| `.c-grid-row`         | @todo       | `responsive` |
-| `.c-grid-row-start`   | @todo       | `responsive` |
-| `.c-grid-row-center`  | @todo       | `responsive` |
-| `.c-grid-row-end`     | @todo       | `responsive` |
-| `.c-grid-row-stretch` | @todo       | `responsive` |
+| `.grid-row`         | @todo       | `responsive` |
+| `.grid-row-start`   | @todo       | `responsive` |
+| `.grid-row-center`  | @todo       | `responsive` |
+| `.grid-row-end`     | @todo       | `responsive` |
+| `.grid-row-stretch` | @todo       | `responsive` |
 
 ### Columns
 
 |        Class         | Description |   Variants   |
 |----------------------|-------------|--------------|
-| `.c-grid-pull-<count>` | @todo       | `responsive` |
-| `.c-grid-push-<count>` | @todo       | `responsive` |
-| `.c-grid-col-<count>`  | @todo       | `responsive` |
-| `.c-grid-col-center`   | @todo       | `responsive` |
-| `.c-grid-col-clear`    | @todo       | `responsive` |
-| `.c-grid-col-left`     | @todo       | `responsive` |
-| `.c-grid-col-no-clear` | @todo       | `responsive` |
-| `.c-grid-col-right`    | @todo       | `responsive` |
+| `.grid-pull-<count>` | @todo       | `responsive` |
+| `.grid-push-<count>` | @todo       | `responsive` |
+| `.grid-col-<count>`  | @todo       | `responsive` |
+| `.grid-col-center`   | @todo       | `responsive` |
+| `.grid-col-clear`    | @todo       | `responsive` |
+| `.grid-col-left`     | @todo       | `responsive` |
+| `.grid-col-no-clear` | @todo       | `responsive` |
+| `.grid-col-right`    | @todo       | `responsive` |
 
 
 ## Examples
@@ -120,100 +120,100 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
 ### Simple
 
 <Preview>
-  <div class="c-grid">
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-1">
+  <div class="grid">
+    <div class="grid-row mb-2">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-2">
+    <div class="grid-row mb-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-3">
+    <div class="grid-row mb-2">
+      <div class="grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="c-grid-col-3">
+      <div class="grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="c-grid-col-3">
+      <div class="grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="c-grid-col-3">
+      <div class="grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-4">
+    <div class="grid-row mb-2">
+      <div class="grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
-      <div class="c-grid-col-4">
+      <div class="grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
-      <div class="c-grid-col-4">
+      <div class="grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-6">
+    <div class="grid-row mb-2">
+      <div class="grid-col-6">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
       </div>
-      <div class="c-grid-col-6">
+      <div class="grid-col-6">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-12">
+    <div class="grid-row mb-2">
+      <div class="grid-col-12">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
       </div>
     </div>
@@ -221,100 +221,100 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
 </Preview>
 
 ```html
-<div class="c-grid">
-  <div class="c-grid-row mb-2">
-    <div class="c-grid-col-1">
+<div class="grid">
+  <div class="grid-row mb-2">
+    <div class="grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="c-grid-col-1">
+    <div class="grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="c-grid-col-1">
+    <div class="grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="c-grid-col-1">
+    <div class="grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="c-grid-col-1">
+    <div class="grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="c-grid-col-1">
+    <div class="grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="c-grid-col-1">
+    <div class="grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="c-grid-col-1">
+    <div class="grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="c-grid-col-1">
+    <div class="grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="c-grid-col-1">
+    <div class="grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="c-grid-col-1">
+    <div class="grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="c-grid-col-1">
+    <div class="grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
   </div>
-  <div class="c-grid-row mb-2">
-    <div class="c-grid-col-2">
+  <div class="grid-row mb-2">
+    <div class="grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="c-grid-col-2">
+    <div class="grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="c-grid-col-2">
+    <div class="grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="c-grid-col-2">
+    <div class="grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="c-grid-col-2">
+    <div class="grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="c-grid-col-2">
+    <div class="grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
   </div>
-  <div class="c-grid-row mb-2">
-    <div class="c-grid-col-3">
+  <div class="grid-row mb-2">
+    <div class="grid-col-3">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
     </div>
-    <div class="c-grid-col-3">
+    <div class="grid-col-3">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
     </div>
-    <div class="c-grid-col-3">
+    <div class="grid-col-3">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
     </div>
-    <div class="c-grid-col-3">
+    <div class="grid-col-3">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
     </div>
   </div>
-  <div class="c-grid-row mb-2">
-    <div class="c-grid-col-4">
+  <div class="grid-row mb-2">
+    <div class="grid-col-4">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
     </div>
-    <div class="c-grid-col-4">
+    <div class="grid-col-4">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
     </div>
-    <div class="c-grid-col-4">
+    <div class="grid-col-4">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
     </div>
   </div>
-  <div class="c-grid-row mb-2">
-    <div class="c-grid-col-6">
+  <div class="grid-row mb-2">
+    <div class="grid-col-6">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
     </div>
-    <div class="c-grid-col-6">
+    <div class="grid-col-6">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
     </div>
   </div>
-  <div class="c-grid-row mb-2">
-    <div class="c-grid-col-12">
+  <div class="grid-row mb-2">
+    <div class="grid-col-12">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
     </div>
   </div>
@@ -324,100 +324,100 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
 ### No gutter
 
 <Preview>
-  <div class="c-grid c-grid-no-gutter">
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-1">
+  <div class="grid grid-no-gutter">
+    <div class="grid-row mb-2">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-2">
+    <div class="grid-row mb-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-3">
+    <div class="grid-row mb-2">
+      <div class="grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="c-grid-col-3">
+      <div class="grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="c-grid-col-3">
+      <div class="grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="c-grid-col-3">
+      <div class="grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-4">
+    <div class="grid-row mb-2">
+      <div class="grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
-      <div class="c-grid-col-4">
+      <div class="grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
-      <div class="c-grid-col-4">
+      <div class="grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-6">
+    <div class="grid-row mb-2">
+      <div class="grid-col-6">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
       </div>
-      <div class="c-grid-col-6">
+      <div class="grid-col-6">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-12">
+    <div class="grid-row mb-2">
+      <div class="grid-col-12">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
       </div>
     </div>
@@ -425,7 +425,7 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
 </Preview>
 
 ```html
-<div class="c-grid c-grid-no-gutter">
+<div class="grid grid-no-gutter">
   ...
 </div>
 ```
@@ -433,100 +433,100 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
 ### Nested
 
 <Preview>
-  <div class="c-grid c-grid-nested">
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-1">
+  <div class="grid grid-nested">
+    <div class="grid-row mb-2">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="c-grid-col-1">
+      <div class="grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-2">
+    <div class="grid-row mb-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="c-grid-col-2">
+      <div class="grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-3">
+    <div class="grid-row mb-2">
+      <div class="grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="c-grid-col-3">
+      <div class="grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="c-grid-col-3">
+      <div class="grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="c-grid-col-3">
+      <div class="grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-4">
+    <div class="grid-row mb-2">
+      <div class="grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
-      <div class="c-grid-col-4">
+      <div class="grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
-      <div class="c-grid-col-4">
+      <div class="grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-6">
+    <div class="grid-row mb-2">
+      <div class="grid-col-6">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
       </div>
-      <div class="c-grid-col-6">
+      <div class="grid-col-6">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
       </div>
     </div>
-    <div class="c-grid-row mb-2">
-      <div class="c-grid-col-12">
+    <div class="grid-row mb-2">
+      <div class="grid-col-12">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
       </div>
     </div>
@@ -534,7 +534,7 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
 </Preview>
 
 ```html
-<div class="c-grid c-grid-nested">
+<div class="grid grid-nested">
   ...
 </div>
 ```

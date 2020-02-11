@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 prev: false
-next: ./grid.html
+next: ./display.html
 ---
 
 # Debug Outline
@@ -30,15 +30,15 @@ Whether the plugin is active or not.
 ### `debugOutline.prefix`
 
 - Type: `String`
-- Default: `c-`
+- Default: `''`
 
-The prefix used by the plugin to prevent conflicts with other classes. It defaults to `c-` as this plugin adds **component** classes. Example usage:
+The prefix used by the plugin to prevent conflicts with other classes. It defaults to an empty string. Example usage:
 
 ```js{3-5}
 module.exports = {
   theme: {
     debugOutline: {
-      prefix: 'c-',
+      prefix: 'custom-',
     },
   },
 };
@@ -47,43 +47,43 @@ module.exports = {
 ## Examples
 
 <Preview>
-  <div class="c-debug">
-    <div class="c-grid">
-      <div class="c-grid-row mb-2">
-        <div class="c-grid-col-3">
+  <div class="debug">
+    <div class="grid">
+      <div class="grid-row mb-2">
+        <div class="grid-col-3">
           <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
         </div>
-        <div class="c-grid-col-3">
+        <div class="grid-col-3">
           <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
         </div>
-        <div class="c-grid-col-3">
+        <div class="grid-col-3">
           <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
         </div>
-        <div class="c-grid-col-3">
+        <div class="grid-col-3">
           <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
         </div>
       </div>
-      <div class="c-grid-row mb-2">
-        <div class="c-grid-col-4">
+      <div class="grid-row mb-2">
+        <div class="grid-col-4">
           <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
         </div>
-        <div class="c-grid-col-4">
+        <div class="grid-col-4">
           <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
         </div>
-        <div class="c-grid-col-4">
+        <div class="grid-col-4">
           <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
         </div>
       </div>
-      <div class="c-grid-row mb-2">
-        <div class="c-grid-col-6">
+      <div class="grid-row mb-2">
+        <div class="grid-col-6">
           <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
         </div>
-        <div class="c-grid-col-6">
+        <div class="grid-col-6">
           <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
         </div>
       </div>
-      <div class="c-grid-row mb-2">
-        <div class="c-grid-col-12">
+      <div class="grid-row mb-2">
+        <div class="grid-col-12">
           <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
         </div>
       </div>
