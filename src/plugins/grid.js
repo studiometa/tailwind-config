@@ -1,5 +1,6 @@
 const range = require('lodash.range');
 const max = require('lodash.max');
+const { default: prefixSelector } = require('tailwindcss/lib/util/prefixSelector');
 
 /**
  * Grid plugin for tailwind
@@ -18,6 +19,8 @@ module.exports = function gridPluginFactory() {
     const columns = range(1, theme('gridPlugin.columns', 12));
     const gutterUnit = theme('gridPlugin.gutterUnit', 'rem');
     let gutterWidth = theme('gridPlugin.gutterWidth', 1);
+    const prefixValue = theme('gridPlugin.prefix', '');
+    const prefix = selector => prefixSelector(prefixValue, selector);
 
     // Transform `gutterWidth` into an object if define as a string or number
     if (typeof gutterWidth === 'string' || typeof gutterWidth === 'number') {
@@ -31,14 +34,14 @@ module.exports = function gridPluginFactory() {
         /**
          * Add padding's to .grid
          */
-        '.grid': {
+        [prefix('.grid')]: {
           paddingRight: gutterWidth.default * 0.5 + gutterUnit,
           paddingLeft: gutterWidth.default * 0.5 + gutterUnit,
         },
         /**
          * Add margin's to .grid-row
          */
-        '.grid-row': {
+        [prefix('.grid-row')]: {
           marginRight: gutterWidth.default * -0.5 + gutterUnit,
           marginLeft: gutterWidth.default * -0.5 + gutterUnit,
         },
@@ -46,7 +49,7 @@ module.exports = function gridPluginFactory() {
         /**
          * Add padding's to .grid-col-{number}
          */
-        '[class*="grid-col-"]': {
+        [`[class*="${prefixValue}grid-col-"]`]: {
           paddingRight: gutterWidth.default * 0.5 + gutterUnit,
           paddingLeft: gutterWidth.default * 0.5 + gutterUnit,
         },
@@ -58,7 +61,7 @@ module.exports = function gridPluginFactory() {
             /**
              * Column center
              */
-            '.grid-col-center': {
+            [prefix('.grid-col-center')]: {
               float: 'none',
               marginRight: 'auto',
               marginLeft: 'auto',
@@ -68,21 +71,21 @@ module.exports = function gridPluginFactory() {
             /**
              * Clear utilities
              */
-            '.grid-col-clear': { clear: 'both' },
-            '.grid-col-no-clear': { float: 'none' },
+            [prefix('.grid-col-clear')]: { clear: 'both' },
+            [prefix('.grid-col-no-clear')]: { float: 'none' },
 
             /**
              * Floating utilities
              */
-            '.grid-col-right': { float: 'right' },
-            '.grid-col-left': { float: 'left' },
+            [prefix('.grid-col-right')]: { float: 'right' },
+            [prefix('.grid-col-left')]: { float: 'left' },
           },
 
           /**
            * Grid
            */
           {
-            '.grid': {
+            [prefix('.grid')]: {
               minHeight: '1px',
               marginRight: 'auto',
               marginLeft: 'auto',
@@ -92,13 +95,17 @@ module.exports = function gridPluginFactory() {
            * No gutter / nested grids utilities
            */
           {
-            '.grid-no-gutter, .grid-nested, .grid-no-gutter > .grid-row > [class*="grid-col-"]': {
+            [prefix(`
+              .grid-no-gutter,
+              .grid-nested,
+              .grid-no-gutter > .grid-row > [class*="${prefixValue}grid-col-"]
+            `)]: {
               paddingRight: '0',
               paddingLeft: '0',
             },
           },
           {
-            '.grid-no-gutter > .grid-row': {
+            [prefix('.grid-no-gutter > .grid-row')]: {
               marginRight: '0',
               marginLeft: '0',
             },
@@ -108,7 +115,7 @@ module.exports = function gridPluginFactory() {
            * Row
            */
           {
-            '.grid-row': {
+            [prefix('.grid-row')]: {
               position: 'relative',
               '&:after': {
                 content: "''",
@@ -122,7 +129,7 @@ module.exports = function gridPluginFactory() {
            * Row flex utilities
            */
           {
-            '.grid-row-end, .grid-row-center, .grid-row-stretch': {
+            [prefix('.grid-row-end, .grid-row-center, .grid-row-stretch')]: {
               display: 'flex',
               flexWrap: 'wrap',
             },
@@ -132,12 +139,20 @@ module.exports = function gridPluginFactory() {
            * Row order
            */
           {
-            '.grid-row-end .grid-col-left, .grid-row-center .grid-col-left, .grid-row-stretch .grid-col-left': {
+            [prefix(`
+              .grid-row-end .grid-col-left,
+              .grid-row-center .grid-col-left,
+              .grid-row-stretch .grid-col-left
+            `)]: {
               order: '0',
             },
           },
           {
-            '.grid-row-end .grid-col-right, .grid-row-center .grid-col-right, .grid-row-stretch .grid-col-right': {
+            [prefix(`
+              .grid-row-end .grid-col-right,
+              .grid-row-center .grid-col-right,
+              .grid-row-stretch .grid-col-right
+            `)]: {
               order: '1',
             },
           },
@@ -145,28 +160,28 @@ module.exports = function gridPluginFactory() {
           /**
            * Row stretch
            */
-          { '.grid-row-stretch': { alignItems: 'stretch' } },
+          { [prefix('.grid-row-stretch')]: { alignItems: 'stretch' } },
 
           /**
            * Row center
            */
-          { '.grid-row-center': { alignItems: 'center' } },
+          { [prefix('.grid-row-center')]: { alignItems: 'center' } },
 
           /**
            * Row start
            */
-          { '.grid-row-start': { alignItems: 'flex-start' } },
+          { [prefix('.grid-row-start')]: { alignItems: 'flex-start' } },
 
           /**
            * Row end
            */
-          { '.grid-row-end': { alignItems: 'flex-end' } },
+          { [prefix('.grid-row-end')]: { alignItems: 'flex-end' } },
 
           /**
            * Row stretch
            */
           {
-            '.grid-row-stretch > [class*=grid-col-]': {
+            [prefix(`.grid-row-stretch > [class*="${prefixValue}grid-col-"]`)]: {
               display: 'flex',
               alignItems: 'stretch',
             },
@@ -174,16 +189,16 @@ module.exports = function gridPluginFactory() {
           /**
            * Zero based column classes
            */
-          { '.grid-pull-0': { marginLeft: '0' } },
-          { '.grid-push-0': { marginLeft: '0' } },
-          { '.grid-col-0': { display: 'none' } },
+          { [prefix('.grid-pull-0')]: { marginLeft: '0' } },
+          { [prefix('.grid-push-0')]: { marginLeft: '0' } },
+          { [prefix('.grid-col-0')]: { display: 'none' } },
 
           /**
            * Column pull
            * grid-pull-{number}
            */
           ...range(1, max(columns) + 2).map(count => ({
-            [`.grid-pull-${count}`]: {
+            [prefix(`.grid-pull-${count}`)]: {
               marginLeft: `${(count * -100) / (max(columns) + 1)}%`,
             },
           })),
@@ -193,7 +208,7 @@ module.exports = function gridPluginFactory() {
            * grid-push-{number}
            */
           ...range(1, max(columns) + 2).map(count => ({
-            [`.grid-push-${count}`]: {
+            [prefix(`.grid-push-${count}`)]: {
               marginLeft: `${(count * 100) / (max(columns) + 1)}%`,
             },
           })),
@@ -203,7 +218,7 @@ module.exports = function gridPluginFactory() {
            * grid-col-{number}
            */
           ...range(1, max(columns) + 2).map(count => ({
-            [`.grid-col-${count}`]: {
+            [prefix(`.grid-col-${count}`)]: {
               float: 'left',
               display: 'block',
               width: `${(count * 100) / (max(columns) + 1)}%`,
@@ -221,14 +236,14 @@ module.exports = function gridPluginFactory() {
             /**
              * Add padding's to .grid
              */
-            '.grid': {
+            [prefix('.grid')]: {
               paddingRight: gutterWidth[breakpoint] * 0.5 + gutterUnit,
               paddingLeft: gutterWidth[breakpoint] * 0.5 + gutterUnit,
             },
             /**
              * Add margin's to .grid-row
              */
-            '.grid-row': {
+            [prefix('.grid-row')]: {
               marginRight: gutterWidth[breakpoint] * -0.5 + gutterUnit,
               marginLeft: gutterWidth[breakpoint] * -0.5 + gutterUnit,
             },
@@ -236,7 +251,7 @@ module.exports = function gridPluginFactory() {
             /**
              * Add padding's to .grid-col-{number}
              */
-            [`[class*="grid-col-"]`]: {
+            [`[class*="${prefixValue}grid-col-"]`]: {
               paddingRight: gutterWidth[breakpoint] * 0.5 + gutterUnit,
               paddingLeft: gutterWidth[breakpoint] * 0.5 + gutterUnit,
             },

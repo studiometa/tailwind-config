@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 prev: false
-next: ./grid.html
+next: ./display.html
 ---
 
 # Debug Outline
@@ -26,6 +26,23 @@ module.exports = {
 - Default: `false`
 
 Whether the plugin is active or not.
+
+### `debugOutline.prefix`
+
+- Type: `String`
+- Default: `''`
+
+The prefix used by the plugin to prevent conflicts with other classes. It defaults to an empty string. Example usage:
+
+```js{3-5}
+module.exports = {
+  theme: {
+    debugOutline: {
+      prefix: 'custom-',
+    },
+  },
+};
+```
 
 ## Examples
 
