@@ -1,3 +1,8 @@
+---
+prev: /configuration/
+next: /plugins/debug-outline.html
+---
+
 # Plugins
 
 This configuration is supercharged with some useful plugins. Find below the complete used list and what they are used for.
