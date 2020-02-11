@@ -12,23 +12,6 @@
 module.exports = {
   theme: {
     /**
-     * Debug
-     */
-    debugOutline: false,
-
-    /**
-     * Grid
-     */
-    gridPlugin: {
-      gutterWidth: {
-        default: 1,
-        s: 2,
-        l: 3,
-        xxl: 4,
-      },
-    },
-
-    /**
      * Breakpoints
      */
     screens: {
@@ -65,6 +48,23 @@ module.exports = {
       default: '1',
       under: '-1',
       limbo: '-999',
+    },
+
+    /**
+     * Debug
+     */
+    debugOutline: false,
+
+    /**
+     * Grid
+     */
+    gridPlugin: {
+      gutterWidth: {
+        default: 1,
+        s: 2,
+        l: 3,
+        xxl: 4,
+      },
     },
   },
   variants: {
