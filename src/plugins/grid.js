@@ -53,6 +53,39 @@ module.exports = function gridPluginFactory() {
           paddingRight: gutterWidth.default * 0.5 + gutterUnit,
           paddingLeft: gutterWidth.default * 0.5 + gutterUnit,
         },
+      },
+      ...Object.keys(screens)
+        .filter(breakpoint => breakpoint in gutterWidth)
+        .map(breakpoint => ({
+          /**
+           * Declare the @media query rule
+           */
+          [`@screen ${breakpoint}`]: {
+            /**
+             * Add padding's to .grid
+             */
+            [prefix('.grid')]: {
+              paddingRight: gutterWidth[breakpoint] * 0.5 + gutterUnit,
+              paddingLeft: gutterWidth[breakpoint] * 0.5 + gutterUnit,
+            },
+            /**
+             * Add margin's to .grid-row
+             */
+            [prefix('.grid-row')]: {
+              marginRight: gutterWidth[breakpoint] * -0.5 + gutterUnit,
+              marginLeft: gutterWidth[breakpoint] * -0.5 + gutterUnit,
+            },
+
+            /**
+             * Add padding's to .grid-col-{number}
+             */
+            [`[class*="${prefixValue}grid-col-"]`]: {
+              paddingRight: gutterWidth[breakpoint] * 0.5 + gutterUnit,
+              paddingLeft: gutterWidth[breakpoint] * 0.5 + gutterUnit,
+            },
+          },
+        })),
+      {
         /**
          * Responsive classes
          */
@@ -226,37 +259,6 @@ module.exports = function gridPluginFactory() {
           })),
         ],
       },
-      ...Object.keys(screens)
-        .filter(breakpoint => breakpoint in gutterWidth)
-        .map(breakpoint => ({
-          /**
-           * Declare the @media query rule
-           */
-          [`@screen ${breakpoint}`]: {
-            /**
-             * Add padding's to .grid
-             */
-            [prefix('.grid')]: {
-              paddingRight: gutterWidth[breakpoint] * 0.5 + gutterUnit,
-              paddingLeft: gutterWidth[breakpoint] * 0.5 + gutterUnit,
-            },
-            /**
-             * Add margin's to .grid-row
-             */
-            [prefix('.grid-row')]: {
-              marginRight: gutterWidth[breakpoint] * -0.5 + gutterUnit,
-              marginLeft: gutterWidth[breakpoint] * -0.5 + gutterUnit,
-            },
-
-            /**
-             * Add padding's to .grid-col-{number}
-             */
-            [`[class*="${prefixValue}grid-col-"]`]: {
-              paddingRight: gutterWidth[breakpoint] * 0.5 + gutterUnit,
-              paddingLeft: gutterWidth[breakpoint] * 0.5 + gutterUnit,
-            },
-          },
-        })),
     ]);
   };
 };
