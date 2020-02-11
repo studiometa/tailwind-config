@@ -45,6 +45,8 @@ module.exports = {
 };
 ```
 
+[Documentation](https://tailwindcss.com/docs/theme/#screens)
+
 ### Colors
 
 ```js{3-14}
@@ -66,6 +68,8 @@ module.exports = {
 };
 ```
 
+[Documentation](https://tailwindcss.com/docs/theme/#colors)
+
 ::: tip
 You should add colors to your project via the `theme.extend` property to not override these defaults.
 :::
@@ -85,6 +89,8 @@ module.exports = {
   },
 };
 ```
+
+[Documentation](https://tailwindcss.com/docs/z-index/)
 
 ::: tip
 You should add new layers to your project via the `theme.extend` property to not override these defaults.
