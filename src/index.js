@@ -90,12 +90,6 @@ module.exports = {
      * @since 1.0.0-alpha.5
      */
     require('tailwindcss-typography')({
-      ellipsis: true,
-      hyphens: true,
-      textUnset: true,
-      caps: true,
-      nums: true,
-      ligatures: true,
       componentPrefix: 'type-',
     }),
   ],
