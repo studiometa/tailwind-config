@@ -12,6 +12,13 @@
 module.exports = {
   theme: {
     /**
+     * Container
+     */
+    container: {
+      center: true,
+    },
+
+    /**
      * Breakpoints
      */
     screens: {

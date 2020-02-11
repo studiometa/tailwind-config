@@ -12,6 +12,22 @@ The purpose of this custom configuration is to provide some useful additions to 
 
 ## Theme
 
+### Container
+
+The core container plugin is centered by default.
+
+```js{3-5}
+module.exports = {
+  theme: {
+    container: {
+      center: true,
+    },
+  },
+};
+```
+
+[Documentation](https://tailwindcss.com/docs/container#centering-by-default)
+
 ### Screens
 
 ```js{3-10}
