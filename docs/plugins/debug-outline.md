@@ -30,15 +30,15 @@ Whether the plugin is active or not.
 ### `debugOutline.prefix`
 
 - Type: `String`
-- Default: `b-`
+- Default: `c-`
 
-The prefix used by the plugin to prevent conflicts with other classes. It defaults to `b-` as this plugin adds **base** classes. Example usage:
+The prefix used by the plugin to prevent conflicts with other classes. It defaults to `c-` as this plugin adds **component** classes. Example usage:
 
 ```js{3-5}
 module.exports = {
   theme: {
     debugOutline: {
-      prefix: 'b-',
+      prefix: 'c-',
     },
   },
 };
@@ -47,7 +47,7 @@ module.exports = {
 ## Examples
 
 <Preview>
-  <div class="b-debug">
+  <div class="c-debug">
     <div class="c-grid">
       <div class="c-grid-row mb-2">
         <div class="c-grid-col-3">

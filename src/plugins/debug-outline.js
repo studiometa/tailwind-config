@@ -6,16 +6,16 @@ const { default: prefixSelector } = require('tailwindcss/lib/util/prefixSelector
  * @package @studiometa/tailwind-config
  */
 module.exports = function debugOutlinePluginFactory() {
-  return function debugOutlinePlugin({ addBase, theme }) {
+  return function debugOutlinePlugin({ addComponents, theme }) {
     const debug = theme('debugOutline', false);
-    const prefixValue = theme('debugOutline.prefix', 'b-');
+    const prefixValue = theme('debugOutline.prefix', 'c-');
     const prefix = selector => prefixSelector(prefixValue, selector);
 
     if (!debug) {
       return;
     }
 
-    addBase([
+    addComponents([
       {
         [prefix('.debug')]: {
           '*:after, *:before': { outline: '1px solid rgba(255, 0, 0, 0.5) !important' },
