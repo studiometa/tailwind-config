@@ -538,3 +538,135 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
   ...
 </div>
 ```
+
+### Tailwind only equivalent
+
+The grid plugin can be replaced with Tailwind utility classes for expert users:
+
+<Preview>
+  <div class="px-2 s:px-4 l:px-6 xxl:px-8">
+    <p class="mb-2">Tailwind</p>
+    <div class="clearfix -mx-2 s:-mx-4 l:-mx-6 xxl:-mx-8 mb-4">
+      <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <p class="mb-2">Grid plugin</p>
+    <div class="grid-row mb-2">
+      <div class="grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+      <div class="grid-col-1">
+        <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+      </div>
+    </div>
+  </div>
+</Preview>
+
+```html
+<div class="px-2 s:px-4 l:px-6 xxl:px-8">
+  <div class="clearfix -mx-2 s:-mx-4 l:-mx-6 xxl:-mx-8">
+    <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+      <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+    </div>
+    <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+      <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+    </div>
+    <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+      <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+    </div>
+    <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+      <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+    </div>
+    <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+      <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+    </div>
+    <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+      <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+    </div>
+    <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+      <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+    </div>
+    <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+      <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+    </div>
+    <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+      <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+    </div>
+    <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+      <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+    </div>
+    <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+      <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+    </div>
+    <div class="w-1/12 float-left px-2 s:px-4 l:px-6 xxl:px-8">
+      <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
+    </div>
+  </div>
+</div>
+```
