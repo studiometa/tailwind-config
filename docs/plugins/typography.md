@@ -16,12 +16,6 @@ The plugin is used with the following custom configuration:
 
 ```js
 require('tailwindcss-typography')({
-  ellipsis: true,
-  hyphens: true,
-  textUnset: true,
-  caps: true,
-  nums: true,
-  ligatures: true,
   // Text styles component classes will be prefixed by `.type-...`
   componentPrefix: 'type-',
 });

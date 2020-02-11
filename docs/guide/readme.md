@@ -1,5 +1,7 @@
 ---
 sidebar: auto
+prev: false
+next: /configuration/
 ---
 
 # Guide
@@ -30,6 +32,27 @@ module.exports = merge(config, {
   },
 });
 ```
+
+Then, add the Tailwind directives in your global `app.scss` file:
+
+```scss
+// Import Tailwind's base the your project's base
+@tailwind base;
+// @import 'base/...';
+
+// Import Tailwind's components then your project's components
+@tailwind components;
+// @import 'components/...';
+
+// Import Tailwind's utilities then your project's utilities
+@tailwind utilities;
+// @import 'utilities/...';
+```
+
+::: warning
+Do not forget to configure [Purge CSS](https://purgecss.com/) in your project to remove all unused classes from the generated CSS files.
+:::
+
 ## How to and best practices
 
 ### Responsive
@@ -56,7 +79,7 @@ To manage the import of custom utility classes on Tailwind using a preprocessor 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./custom-utilities";
+@import 'utilities/custom-utility';
 ```
 
 To create custom utility classes that can be used with the breakpoints defined in our configuration you should declare these utility classes in a `@responsive` directive.
@@ -100,7 +123,7 @@ We can add custom utilities with plugin. The following example generates the sam
 // tailwind.config.js
 module.exports = {
   plugins: [
-    function({ addUtilities }) {
+    ({ addUtilities }) => {
       const newUtilities = {
         '.rotate-0': {
           transform: 'rotate(0deg)',
@@ -114,12 +137,12 @@ module.exports = {
         '.rotate-270': {
           transform: 'rotate(270deg)',
         },
-      }
+      };
 
-      addUtilities(newUtilities, ['responsive', 'hover'])
-    }
-  ]
-}
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
+};
 ```
 
 Read the [documentation](https://tailwindcss.com/docs/plugins/#adding-utilities) for more informations on plugins.
@@ -234,7 +257,7 @@ This will generate the following CSS:
   /* ... */
 }
 
-@media  (min-width: 1024px) {
+@media (min-width: 1024px) {
   .m\:bg-gradient-brand {
     background-image: linear-gradient(blue, green);
   }

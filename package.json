@@ -1,13 +1,13 @@
 {
   "name": "@studiometa/tailwind-config",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "description": "A custom Tailwind CSS config",
   "main": "src/index.js",
   "scripts": {
-    "test": "npm run lint && npm run stylelint && npm run test-build && echo 'All test passed! 🎉\n' && exit 0",
-    "test-build": "if gulp styles-build -q 2>&1 >/dev/null | tee tmp | grep -q 'Error'; then cat tmp && rm tmp && exit 1; else rm tmp && exit 0; fi;",
+    "test": "npm run lint && npm run test:build && echo \"\\033[0;37mAll test passed! 🎉\n\" && exit 0",
+    "test:build": "if npm run style:build 2>&1 >/dev/null | tee tmp | grep -q 'Error'; then cat tmp && rm tmp && exit 1; else rm tmp && exit 0; fi;",
+    "style:build": "rm -rf tests/dist && parcel build tests/src/*.css --out-dir tests/dist --cache-dir node_modules/.cache --no-minify --no-source-maps",
     "lint": "eslint src/",
-    "stylelint": "stylelint 'tests/src/**/*.scss'",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
@@ -23,28 +23,21 @@
   "homepage": "https://github.com/studiometa/tailwind-config#readme",
   "devDependencies": {
     "@studiometa/eslint-config": "^2.0.3",
-    "@studiometa/gulp-config": "^1.5.0-beta.25",
     "@studiometa/prettier-config": "^2.0.0",
-    "@studiometa/stylelint-config": "^1.2.3",
     "eslint": "^6.8.0",
-    "husky": "^4.0.0",
+    "parcel": "^1.12.4",
     "prettier": "^1.19.1",
-    "stylelint": "^13.0.0",
-    "sass": "^1.25.0",
-    "sass-loader": "^8.0.2",
-    "tailwindcss": "^1.1.4",
+    "tailwindcss": "^1",
     "to-string-loader": "^1.1.6",
     "vuepress": "^1.2.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
   },
   "dependencies": {
     "lodash.max": "^4.0.1",
     "lodash.range": "^3.2.0",
-    "tailwindcss-typography": "^2.2.0"
+    "tailwindcss-typography": "^3.0.0"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^1"
   },
   "engines": {
     "node": ">=8.3.0"
