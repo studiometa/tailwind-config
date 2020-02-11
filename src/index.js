@@ -177,8 +177,12 @@ module.exports = {
     visibility: ['responsive'],
     zIndex: ['responsive'],
   },
+  corePlugins: {
+    display: false,
+  },
   plugins: [
     require('./plugins/debug-outline')(),
+    require('./plugins/display')(),
     require('./plugins/grid')(),
     /**
      * Tailwind CSS typograpy plugin.

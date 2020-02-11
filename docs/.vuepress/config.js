@@ -15,6 +15,7 @@ module.exports = {
         link: '/plugins/',
         items: [
           { text: 'Debug outline', link: '/plugins/debug-outline/' },
+          { text: 'Display', link: '/plugins/display/' },
           { text: 'Grid', link: '/plugins/grid/' },
           { text: 'Typography', link: '/plugins/typography/' },
         ],
