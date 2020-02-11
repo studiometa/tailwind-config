@@ -47,19 +47,14 @@ module.exports = {
       transparent: 'transparent',
       white: '#fff',
       black: '#000',
+      current: 'currentColor',
     },
     textColor: theme => theme('colors'),
     backgroundColor: theme => theme('colors'),
-    fill: theme => ({
-      ...theme('colors'),
-      current: 'currentColor',
-    }),
+    fill: theme => theme('colors'),
     borderColor: theme => theme('colors'),
     placeholderColor: theme => theme('colors'),
-    stroke: theme => ({
-      ...theme('colors'),
-      current: 'currentColor',
-    }),
+    stroke: theme => theme('colors'),
 
     /**
      * Layer
