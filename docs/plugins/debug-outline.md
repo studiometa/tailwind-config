@@ -1,6 +1,6 @@
 ---
 sidebar: auto
-prev: false
+prev: /plugins/
 next: ./display.html
 ---
 

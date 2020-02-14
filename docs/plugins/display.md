@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 prev: ./debug-outline.html
-next: ./grid.html
+next: ./font-face.html
 ---
 
 # Display

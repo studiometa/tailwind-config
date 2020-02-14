@@ -1,6 +1,6 @@
 ---
 sidebar: auto
-prev: ./debug-outline.html
+prev: ./font-face.html
 next: ./typography.html
 ---
 
