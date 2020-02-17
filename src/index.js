@@ -83,6 +83,7 @@ module.exports = {
   plugins: [
     require('./plugins/debug-outline')(),
     require('./plugins/display')(),
+    require('./plugins/font-face')(),
     require('./plugins/grid')(),
     /**
      * Tailwind CSS typograpy plugin.
