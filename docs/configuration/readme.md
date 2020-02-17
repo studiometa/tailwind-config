@@ -145,6 +145,14 @@ module.exports = {
 
 Our custom debug outline plugin is used without specific configuration, read its [documentation](/plugins/debug-outline.html) for more informations.
 
+### Display
+
+Our custom display plugin is used without specific configuration, read its [documentation](/plugins/display.html) for more informations.
+
+### Font-Face
+
+Our custom font-face plugin is used without specific configuration, read its [documentation](/plugins/font-face.html) for more informations.
+
 ### Grid
 
 Our custom grid plugin is used without specific configuration, read its [documentation](/plugins/grid.html) for more informations.

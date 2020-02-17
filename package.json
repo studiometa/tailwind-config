@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run lint && npm run test:build && echo \"\\033[0;37mAll test passed! 🎉\n\" && exit 0",
     "test:build": "if npm run style:build 2>&1 >/dev/null | tee tmp | grep -q 'Error'; then cat tmp && rm tmp && exit 1; else rm tmp && exit 0; fi;",
-    "style:build": "rm -rf tests/dist && parcel build tests/src/*.css --out-dir tests/dist --cache-dir node_modules/.cache --no-minify --no-source-maps",
+    "style:build": "rm -rf tests/dist && parcel build tests/src/*.css --out-dir tests/dist --no-cache --no-minify --no-source-maps",
     "lint": "eslint src/",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
