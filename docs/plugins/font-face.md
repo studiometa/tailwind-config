@@ -10,64 +10,62 @@ The font-face plugin adds `@font-face` declarations in the `@tailwind base` dire
 
 ## Configuration
 
-The plugin can be configured with the `theme.fontFace` property as an array of `FontFace` objects :
+The plugin can be configured with the `theme.fontFace` property :
 
-```js{3-18}
+```js{3-15}
 module.exports = {
   theme: {
-    fontFace: [
-      {
-        name: 'MetaOT',
-        styles: [
-          {
-            filename: 'meta-ot-bold-italic',
-            style: 'italic',
-            weight: 700,
-            display: 'auto',
-          },
-          {
-            filename: 'meta-ot-regular',
-          },
-        ]
-      }
-    ],
+    fontFace: {
+      MetaOT: [
+        {
+          filename: 'meta-ot-bold-italic',
+          style: 'italic',
+          weight: 700,
+          display: 'auto',
+        },
+        {
+          filename: 'meta-ot-regular',
+        },
+      ],
+    },
   },
 };
 ```
 
-### `FontFace.name`
+### `fontFace.<String>`
+
+- Type: `Array.<FontFace>`
+
+An array of [`FontFace`](#fontface) objects that will be attached to the font name given by the object's key.
+
+### `FontFace`
+
+- Type: `Object`
+
+The `FontFace` object describes the value that will be used to generate a `@font-face` declaration.
+
+### `FontFace.filename`
 
 - Type: `String`
-
-The name of the font to be used in `font-family` properties.
-
-### `FontFace.styles`
-
-- Type: `Array`
-
-An array of `FontFaceStyle` to be attached to the font name.
-
-### `FontFaceStyle.filename`
-
-- Type: `String`
+- Required
 
 The filepath withouth extension to the font file. The `woff` and `woff2` formats will be used to generate the `@font-face` declaration.
 
-### `FontFaceStyle.display`
+### `FontFace.display`
 
 - Type: `String`
 - Default : `'auto'`
 
 The display of the font which will be used in a `font-display` property.
 
-### `FontFaceStyle.style`
+### `FontFace.style`
 
 - Type: `String`
 - Default : `'normal'`
 
 The style of the font which will be used in a `font-style` property.
 
-### `FontFaceStyle.weight`
+### `FontFace.weight`
 
 - Type: `[ String, Number ]`
 - Default : `400`
