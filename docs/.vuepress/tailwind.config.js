@@ -1,4 +1,4 @@
-const config = require('./src/index.js');
+const config = require('../../src/index.js');
 
 config.theme.debugOutline = true;
 config.theme.colors.grey = {

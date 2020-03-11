@@ -10,6 +10,10 @@ This project provides some custom `screens`, `colors` and `z-index` configuratio
 
 The purpose of this custom configuration is to provide some useful additions to Tailwind CSS while staying as close to its original setup to take advantage of its well written documentation.
 
+::: tip
+Discover the [full config reference](./reference.md) for a quick overview of what is available.
+:::
+
 ## Theme
 
 ### Container
