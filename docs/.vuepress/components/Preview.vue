@@ -1,27 +1,28 @@
 <template>
   <div class="preview">
-    <div ref="slot" v-show="false">
+    <div v-show="false" ref="slot">
       <slot />
     </div>
     <div
       :style="{
         height: `${iframeHeight}px`
       }">
-      <div class="preview__loader" v-if="isLoading" />
+      <div v-if="isLoading" class="preview__loader" />
       <iframe
-        class="preview__iframe"
         v-show="!isLoading"
+        ref="iframe"
+        class="preview__iframe"
         width="100%"
         :height="iframeHeight"
         :srcdoc="!isFetching && html"
-        ref="iframe"
         frameborder="0" />
     </div>
   </div>
 </template>
 
 <script>
-import { log } from 'util';
+  import { log } from 'util';
+
   export default {
     name: 'Preview',
     props: {
@@ -37,7 +38,7 @@ import { log } from 'util';
         iframeHeight: 300,
         styles: '',
         mode: '',
-      }
+      };
     },
     computed: {
       head() {
@@ -77,7 +78,7 @@ import { log } from 'util';
         this.isLoading = false;
         this.setIframeHeight();
         this.$refs.iframe.contentWindow.addEventListener('resize', () => {
-          this.setIframeHeight()
+          this.setIframeHeight();
         });
       });
     },
