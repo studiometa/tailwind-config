@@ -104,6 +104,14 @@ module.exports = {
         'in-out-quint': 'cubic-bezier(0.86, 0, 0.07, 1)',
         'in-out-sine': 'cubic-bezier(0.445, 0.05, 0.55, 0.95)',
       },
+
+      /**
+       * Inset extension
+       */
+      inset: {
+        '1/2': '50%',
+        full: '100%',
+      },
     },
   },
   variants: {

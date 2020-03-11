@@ -137,6 +137,25 @@ module.exports = {
 
 [Documentation](https://tailwindcss.com/docs/transition-timing-function/)
 
+### Top / Right / Bottom / Left
+
+Often used inset values are added to the default configuration.
+
+```js{4-7}
+module.exports = {
+  theme: {
+    extend: {
+      inset: {
+        '1/2': '50%',
+        full: '100%',
+      },
+    },
+  },
+};
+```
+
+[Documentation](https://tailwindcss.com/docs/top-right-bottom-left/)
+
 ### Debug outline
 
 The [debug outline plugin](#debug-outline-2) is disabled by default.
