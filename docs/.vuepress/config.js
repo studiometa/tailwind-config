@@ -24,10 +24,10 @@ module.exports = {
       { text: 'Github', link: 'https://github.com/studiometa/tailwind-config' },
     ],
   },
+  plugins: [
+    require('./plugins/tailwind-config.js'),
+  ],
   postcss: {
-    plugins: [
-      require('autoprefixer'),
-      require('tailwindcss'),
-    ],
+    plugins: [require('autoprefixer'), require('tailwindcss')],
   },
 };
