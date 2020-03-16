@@ -85,6 +85,7 @@ module.exports = {
     require('./plugins/display')(),
     require('./plugins/font-face')(),
     require('./plugins/grid')(),
+    require('./plugins/wysiwyg')(),
     /**
      * Tailwind CSS typograpy plugin.
      * @see   https://github.com/benface/tailwindcss-typography
