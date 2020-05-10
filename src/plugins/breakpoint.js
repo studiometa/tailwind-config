@@ -15,7 +15,7 @@ module.exports = plugin(
         content: `'${Object.keys(screens).join(',')}'`,
       },
       '[data-breakpoint]::before': {
-        content: `'${theme('smallestBreakpointName')}'`,
+        content: `'${theme('breakpointPlugin.smallestBreakpointName')}'`,
         ...Object.keys(screens).reduce((acc, screen) => {
           acc[`@screen ${screen}`] = {
             content: `'${screen}'`,
@@ -27,7 +27,9 @@ module.exports = plugin(
   },
   {
     theme: {
-      smallestBreakpointName: 'xxs',
+      breakpointPlugin: {
+        smallestBreakpointName: 'xxs',
+      },
     },
   }
 );
