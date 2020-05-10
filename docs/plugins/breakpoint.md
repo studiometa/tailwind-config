@@ -1,6 +1,6 @@
 ---
 sidebar: auto
-prev: /plugins/
+prev: /configuration/
 next: ./debug-outline.html
 ---
 

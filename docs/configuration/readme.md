@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 prev: /guide/
-next: /plugins/
+next: /plugins/breakpoint.html
 ---
 
 # Configuration
