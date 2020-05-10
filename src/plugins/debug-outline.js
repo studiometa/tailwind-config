@@ -9,7 +9,7 @@ module.exports = function debugOutlinePluginFactory() {
   return function debugOutlinePlugin({ addComponents, theme }) {
     const debug = theme('debugOutline', false);
     const prefixValue = theme('debugOutline.prefix', '');
-    const prefix = selector => prefixSelector(prefixValue, selector);
+    const prefix = (selector) => prefixSelector(prefixValue, selector);
 
     if (!debug) {
       return;

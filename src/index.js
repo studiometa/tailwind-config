@@ -39,12 +39,12 @@ module.exports = {
       black: '#000',
       current: 'currentColor',
     },
-    textColor: theme => theme('colors'),
-    backgroundColor: theme => theme('colors'),
-    fill: theme => theme('colors'),
-    borderColor: theme => theme('colors'),
-    placeholderColor: theme => theme('colors'),
-    stroke: theme => theme('colors'),
+    textColor: (theme) => theme('colors'),
+    backgroundColor: (theme) => theme('colors'),
+    fill: (theme) => theme('colors'),
+    borderColor: (theme) => theme('colors'),
+    placeholderColor: (theme) => theme('colors'),
+    stroke: (theme) => theme('colors'),
 
     /**
      * Layer

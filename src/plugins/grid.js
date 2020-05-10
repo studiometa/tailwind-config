@@ -20,7 +20,7 @@ module.exports = function gridPluginFactory() {
     const gutterUnit = theme('gridPlugin.gutterUnit', 'rem');
     let gutterWidth = theme('gridPlugin.gutterWidth', 1);
     const prefixValue = theme('gridPlugin.prefix', '');
-    const prefix = selector => prefixSelector(prefixValue, selector);
+    const prefix = (selector) => prefixSelector(prefixValue, selector);
 
     // Transform `gutterWidth` into an object if define as a string or number
     if (typeof gutterWidth === 'string' || typeof gutterWidth === 'number') {
@@ -55,8 +55,8 @@ module.exports = function gridPluginFactory() {
         },
       },
       ...Object.keys(screens)
-        .filter(breakpoint => breakpoint in gutterWidth)
-        .map(breakpoint => ({
+        .filter((breakpoint) => breakpoint in gutterWidth)
+        .map((breakpoint) => ({
           /**
            * Declare the @media query rule
            */
@@ -230,7 +230,7 @@ module.exports = function gridPluginFactory() {
            * Column pull
            * grid-pull-{number}
            */
-          ...range(1, max(columns) + 2).map(count => ({
+          ...range(1, max(columns) + 2).map((count) => ({
             [prefix(`.grid-pull-${count}`)]: {
               marginLeft: `${(count * -100) / (max(columns) + 1)}%`,
             },
@@ -240,7 +240,7 @@ module.exports = function gridPluginFactory() {
            * Column push
            * grid-push-{number}
            */
-          ...range(1, max(columns) + 2).map(count => ({
+          ...range(1, max(columns) + 2).map((count) => ({
             [prefix(`.grid-push-${count}`)]: {
               marginLeft: `${(count * 100) / (max(columns) + 1)}%`,
             },
@@ -250,7 +250,7 @@ module.exports = function gridPluginFactory() {
            * Column size
            * grid-col-{number}
            */
-          ...range(1, max(columns) + 2).map(count => ({
+          ...range(1, max(columns) + 2).map((count) => ({
             [prefix(`.grid-col-${count}`)]: {
               float: 'left',
               display: 'block',
