@@ -121,6 +121,7 @@ module.exports = {
     display: false,
   },
   plugins: [
+    require('./plugins/breakpoint'),
     require('./plugins/debug-outline')(),
     require('./plugins/display')(),
     require('./plugins/font-face')(),
