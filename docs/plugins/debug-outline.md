@@ -1,6 +1,6 @@
 ---
 sidebar: auto
-prev: /plugins/
+prev: ./breakpoint.html
 next: ./display.html
 ---
 

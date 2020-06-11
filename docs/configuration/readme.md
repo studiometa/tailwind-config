@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 prev: /guide/
-next: /plugins/
+next: /plugins/breakpoint.html
 ---
 
 # Configuration
@@ -205,43 +205,12 @@ module.exports = {
 
 ## Plugins
 
-### Debug outline
-
-Our custom debug outline plugin is used without specific configuration, read its [documentation](/plugins/debug-outline.html) for more informations.
-
-### Display
-
-Our custom display plugin is used without specific configuration, read its [documentation](/plugins/display.html) for more informations.
-
-### Font-Face
-
-Our custom font-face plugin is used without specific configuration, read its [documentation](/plugins/font-face.html) for more informations.
-
-### Grid
-
-Our custom grid plugin is used without specific configuration, read its [documentation](/plugins/grid.html) for more informations.
-
-### Typography
-
-The typography plugin is used with the following configuration:
-
-```js{3-11}
-module.exports = {
-  plugins: [
-    require('tailwindcss-typography')({
-      ellipsis: true,
-      hyphens: true,
-      textUnset: true,
-      caps: true,
-      nums: true,
-      ligatures: true,
-      componentPrefix: 'type-',
-    }),
-  ],
-};
-```
-
-Read our [own documentation](/plugins/typography.html) on its usage and the [plugin's official documentation](https://github.com/benface/tailwindcss-typography#readme) for more informations.
+- [Breakpoint](/plugins/breakpoint.html) to exposes the `screens` configuration in the CSS
+- [Debug outline](/plugins/debug-outline.html) to help debug layout
+- [Display](/plugins/display.html) to fix a naming convention conflict between our [grid plugin](/plugins/grid.html) and the official [grid display](https://tailwindcss.com/docs/display/#grid)
+- [Font-Face](/plugins/font-face.html) to easily add custom `@font-face` declarations
+- [Grid](/plugins/grid.html) to add some grid classes
+- [Typography](/plugins/typography.html) to improve the typography utilities
 
 ---
 

@@ -12,8 +12,8 @@ module.exports = {
       },
       {
         text: 'Plugins',
-        link: '/plugins/',
         items: [
+          { text: 'Breakpoint', link: '/plugins/breakpoint/' },
           { text: 'Debug outline', link: '/plugins/debug-outline/' },
           { text: 'Display', link: '/plugins/display/' },
           { text: 'Font-Face', link: '/plugins/font-face/' },
