@@ -1,0 +1,4 @@
+docs/
+*.sublime-*
+.github/
+tests/
