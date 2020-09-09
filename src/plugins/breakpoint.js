@@ -8,6 +8,7 @@ module.exports = plugin(
       '[data-breakpoint]::after, [data-breakpoint]::before': {
         zIndex: -999,
         position: 'absolute',
+        display: 'none',
         opacity: 0,
         pointerEvents: 'none',
       },
