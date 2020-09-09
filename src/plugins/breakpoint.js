@@ -6,11 +6,7 @@ module.exports = plugin(
 
     addComponents({
       '[data-breakpoint]::after, [data-breakpoint]::before': {
-        zIndex: -999,
-        position: 'absolute',
         display: 'none',
-        opacity: 0,
-        pointerEvents: 'none',
       },
       '[data-breakpoint]::after': {
         content: `'${Object.keys(screens).join(',')}'`,
