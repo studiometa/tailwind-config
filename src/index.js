@@ -74,6 +74,14 @@ module.exports = {
       },
     },
 
+    /**
+     * Font smoothing
+     */
+    fontSmoothingPlugin: 'antialiased',
+
+    /**
+     * Extend
+     */
     extend: {
       /**
        * Timing functions extension
