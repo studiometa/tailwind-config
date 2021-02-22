@@ -29,17 +29,17 @@
     "fuzzysort": "^1.1.4",
     "parcel": "^1.12.4",
     "prettier": "^2.0.5",
-    "tailwindcss": "^1.4.6",
+    "tailwindcss": "^2.0.3",
     "to-string-loader": "^1.1.6",
     "vuepress": "^1.2.0"
   },
   "dependencies": {
     "lodash.max": "^4.0.1",
     "lodash.range": "^3.2.0",
-    "tailwindcss-typography": "^3.0.0"
+    "tailwindcss-typography": ">=3.0.0"
   },
   "peerDependencies": {
-    "tailwindcss": ">=1.4.6"
+    "tailwindcss": ">=2.0.3"
   },
   "engines": {
     "node": ">=8.3.0"
