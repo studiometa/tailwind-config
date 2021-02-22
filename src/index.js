@@ -33,12 +33,6 @@ module.exports = {
     /**
      * Colors
      */
-    colors: {
-      transparent: 'transparent',
-      white: '#fff',
-      black: '#000',
-      current: 'currentColor',
-    },
     textColor: (theme) => theme('colors'),
     backgroundColor: (theme) => theme('colors'),
     fill: (theme) => theme('colors'),
@@ -75,6 +69,14 @@ module.exports = {
     },
 
     extend: {
+      /**
+       * Colors
+       */
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+      },
+
       /**
        * Timing functions extension
        */
