@@ -26,7 +26,7 @@
     "@studiometa/prettier-config": "^2.0.1",
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "autoprefixer": "^9.8.6",
-    "eslint": "^7.0.0",
+    "eslint": "^7.21.0",
     "flat": "^5.0.0",
     "fuzzysort": "^1.1.4",
     "parcel": "^1.12.4",
