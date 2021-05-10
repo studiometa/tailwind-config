@@ -30,7 +30,7 @@
     "flat": "^5.0.0",
     "fuzzysort": "^1.1.4",
     "parcel": "^1.12.4",
-    "postcss": "^7.0.35",
+    "postcss": "^8.2.14",
     "prettier": "^2.0.5",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
     "to-string-loader": "^1.1.6",
