@@ -85,180 +85,178 @@ module.exports = function gridPluginFactory() {
             },
           },
         })),
-      {
+    ]);
+    addComponents(
+      [
+        {
+          /**
+           * Column center
+           */
+          [prefix('.grid-col-center')]: {
+            float: 'none',
+            marginRight: 'auto',
+            marginLeft: 'auto',
+            clear: 'both',
+          },
+
+          /**
+           * Clear utilities
+           */
+          [prefix('.grid-col-clear')]: { clear: 'both' },
+          [prefix('.grid-col-no-clear')]: { float: 'none' },
+
+          /**
+           * Floating utilities
+           */
+          [prefix('.grid-col-right')]: { float: 'right' },
+          [prefix('.grid-col-left')]: { float: 'left' },
+        },
+
         /**
-         * Responsive classes
+         * Grid
          */
-        '@responsive': [
-          {
-            /**
-             * Column center
-             */
-            [prefix('.grid-col-center')]: {
-              float: 'none',
-              marginRight: 'auto',
-              marginLeft: 'auto',
-              clear: 'both',
-            },
-
-            /**
-             * Clear utilities
-             */
-            [prefix('.grid-col-clear')]: { clear: 'both' },
-            [prefix('.grid-col-no-clear')]: { float: 'none' },
-
-            /**
-             * Floating utilities
-             */
-            [prefix('.grid-col-right')]: { float: 'right' },
-            [prefix('.grid-col-left')]: { float: 'left' },
+        {
+          [prefix('.grid')]: {
+            minHeight: '1px',
+            marginRight: 'auto',
+            marginLeft: 'auto',
           },
-
-          /**
-           * Grid
-           */
-          {
-            [prefix('.grid')]: {
-              minHeight: '1px',
-              marginRight: 'auto',
-              marginLeft: 'auto',
-            },
-          },
-          /**
-           * No gutter / nested grids utilities
-           */
-          {
-            [prefix(`
+        },
+        /**
+         * No gutter / nested grids utilities
+         */
+        {
+          [prefix(`
               .grid-no-gutter,
               .grid-nested,
               .grid-no-gutter > .grid-row > [class*="${prefixValue}grid-col-"]
             `)]: {
-              paddingRight: '0',
-              paddingLeft: '0',
-            },
+            paddingRight: '0',
+            paddingLeft: '0',
           },
-          {
-            [prefix('.grid-no-gutter > .grid-row')]: {
-              marginRight: '0',
-              marginLeft: '0',
-            },
+        },
+        {
+          [prefix('.grid-no-gutter > .grid-row')]: {
+            marginRight: '0',
+            marginLeft: '0',
           },
+        },
 
-          /**
-           * Row
-           */
-          {
-            [prefix('.grid-row')]: {
-              position: 'relative',
-              '&:after': {
-                content: "''",
-                display: 'block',
-                clear: 'both',
-              },
+        /**
+         * Row
+         */
+        {
+          [prefix('.grid-row')]: {
+            position: 'relative',
+            '&:after': {
+              content: "''",
+              display: 'block',
+              clear: 'both',
             },
           },
+        },
 
-          /**
-           * Row flex utilities
-           */
-          {
-            [prefix('.grid-row-end, .grid-row-center, .grid-row-stretch')]: {
-              display: 'flex',
-              flexWrap: 'wrap',
-            },
+        /**
+         * Row flex utilities
+         */
+        {
+          [prefix('.grid-row-end, .grid-row-center, .grid-row-stretch')]: {
+            display: 'flex',
+            flexWrap: 'wrap',
           },
+        },
 
-          /**
-           * Row order
-           */
-          {
-            [prefix(`
+        /**
+         * Row order
+         */
+        {
+          [prefix(`
               .grid-row-end .grid-col-left,
               .grid-row-center .grid-col-left,
               .grid-row-stretch .grid-col-left
             `)]: {
-              order: '0',
-            },
+            order: '0',
           },
-          {
-            [prefix(`
+        },
+        {
+          [prefix(`
               .grid-row-end .grid-col-right,
               .grid-row-center .grid-col-right,
               .grid-row-stretch .grid-col-right
             `)]: {
-              order: '1',
-            },
+            order: '1',
           },
+        },
 
-          /**
-           * Row stretch
-           */
-          { [prefix('.grid-row-stretch')]: { alignItems: 'stretch' } },
+        /**
+         * Row stretch
+         */
+        { [prefix('.grid-row-stretch')]: { alignItems: 'stretch' } },
 
-          /**
-           * Row center
-           */
-          { [prefix('.grid-row-center')]: { alignItems: 'center' } },
+        /**
+         * Row center
+         */
+        { [prefix('.grid-row-center')]: { alignItems: 'center' } },
 
-          /**
-           * Row start
-           */
-          { [prefix('.grid-row-start')]: { alignItems: 'flex-start' } },
+        /**
+         * Row start
+         */
+        { [prefix('.grid-row-start')]: { alignItems: 'flex-start' } },
 
-          /**
-           * Row end
-           */
-          { [prefix('.grid-row-end')]: { alignItems: 'flex-end' } },
+        /**
+         * Row end
+         */
+        { [prefix('.grid-row-end')]: { alignItems: 'flex-end' } },
 
-          /**
-           * Row stretch
-           */
-          {
-            [prefix(`.grid-row-stretch > [class*="${prefixValue}grid-col-"]`)]: {
-              display: 'flex',
-              alignItems: 'stretch',
-            },
+        /**
+         * Row stretch
+         */
+        {
+          [prefix(`.grid-row-stretch > [class*="${prefixValue}grid-col-"]`)]: {
+            display: 'flex',
+            alignItems: 'stretch',
           },
-          /**
-           * Zero based column classes
-           */
-          { [prefix('.grid-pull-0')]: { marginLeft: '0' } },
-          { [prefix('.grid-push-0')]: { marginLeft: '0' } },
-          { [prefix('.grid-col-0')]: { display: 'none' } },
+        },
+        /**
+         * Zero based column classes
+         */
+        { [prefix('.grid-pull-0')]: { marginLeft: '0' } },
+        { [prefix('.grid-push-0')]: { marginLeft: '0' } },
+        { [prefix('.grid-col-0')]: { display: 'none' } },
 
-          /**
-           * Column pull
-           * grid-pull-{number}
-           */
-          ...range(1, max(columns) + 2).map((count) => ({
-            [prefix(`.grid-pull-${count}`)]: {
-              marginLeft: `${(count * -100) / (max(columns) + 1)}%`,
-            },
-          })),
+        /**
+         * Column pull
+         * grid-pull-{number}
+         */
+        ...range(1, max(columns) + 2).map((count) => ({
+          [prefix(`.grid-pull-${count}`)]: {
+            marginLeft: `${(count * -100) / (max(columns) + 1)}%`,
+          },
+        })),
 
-          /**
-           * Column push
-           * grid-push-{number}
-           */
-          ...range(1, max(columns) + 2).map((count) => ({
-            [prefix(`.grid-push-${count}`)]: {
-              marginLeft: `${(count * 100) / (max(columns) + 1)}%`,
-            },
-          })),
+        /**
+         * Column push
+         * grid-push-{number}
+         */
+        ...range(1, max(columns) + 2).map((count) => ({
+          [prefix(`.grid-push-${count}`)]: {
+            marginLeft: `${(count * 100) / (max(columns) + 1)}%`,
+          },
+        })),
 
-          /**
-           * Column size
-           * grid-col-{number}
-           */
-          ...range(1, max(columns) + 2).map((count) => ({
-            [prefix(`.grid-col-${count}`)]: {
-              float: 'left',
-              display: 'block',
-              width: `${(count * 100) / (max(columns) + 1)}%`,
-            },
-          })),
-        ],
-      },
-    ]);
+        /**
+         * Column size
+         * grid-col-{number}
+         */
+        ...range(1, max(columns) + 2).map((count) => ({
+          [prefix(`.grid-col-${count}`)]: {
+            float: 'left',
+            display: 'block',
+            width: `${(count * 100) / (max(columns) + 1)}%`,
+          },
+        })),
+      ],
+      { variants: ['responsive'] }
+    );
   };
 };
