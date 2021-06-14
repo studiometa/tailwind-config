@@ -1,0 +1,31 @@
+{
+  "name": "@studiometa/tailwind-config",
+  "version": "1.0.3",
+  "description": "A custom Tailwind CSS config",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studiometa/tailwind-config.git"
+  },
+  "author": "Studio Meta <agence@studiometa.fr> (https://www.studiometa.fr)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/studiometa/tailwind-config/issues"
+  },
+  "homepage": "https://github.com/studiometa/tailwind-config#readme",
+  "dependencies": {
+    "lodash.max": "^4.0.1",
+    "lodash.range": "^3.2.0",
+    "tailwindcss-typography": "^3.1.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.2.6",
+    "tailwindcss": "^1.4.6 || ^2.1.4"
+  },
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

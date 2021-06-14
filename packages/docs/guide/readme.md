@@ -22,16 +22,20 @@ Import the configuration in your project's `tailwind.config.js` file.
 // As is with no custom configuration
 module.exports = require('@studiometa/tailwind-config');
 
-// By merging the package's configuration with you own custom one
-const config = require('@studiometa/tailwind-config');
-const merge = require('lodash.merge');
-
-module.exports = merge(config, {
-  theme: {
-    // ...
-  },
-});
+// By adding the package's configuration as a preset and overriding it based on your project's needs
+module.exports = {
+  presets: [
+    require('@studiometa/tailwind-config')
+  ],
+  // ...
+}
 ```
+
+:::tip
+  `preset` extends the tailwindCSS 's base config object.
+  If some parts of your tailwind config are redundant between projects,
+  it can be a good strategy to load them from a preset.
+:::
 
 Then, add the Tailwind directives in your global `app.scss` file:
 

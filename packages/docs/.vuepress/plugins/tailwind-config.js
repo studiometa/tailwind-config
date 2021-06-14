@@ -1,9 +1,9 @@
 const resolveConfig = require('tailwindcss/resolveConfig');
-const config = require('../../../src/index.js');
+const config = require('@studiometa/tailwind-config');
 const resolvedConfig = resolveConfig(config);
 
 // Use the function's name for plugins which are not exposing an object
-resolvedConfig.plugins = resolvedConfig.plugins.map(plugin => {
+resolvedConfig.plugins = resolvedConfig.plugins.map((plugin) => {
   if (typeof plugin === 'function' && plugin.name) {
     return plugin.name;
   }
@@ -12,9 +12,7 @@ resolvedConfig.plugins = resolvedConfig.plugins.map(plugin => {
 });
 
 module.exports = (options, context) => ({
-  define() {
-    return {
-      TAILWIND_CONFIG: resolvedConfig,
-    };
+  define: {
+    TAILWIND_CONFIG: JSON.stringify(resolvedConfig),
   },
 });

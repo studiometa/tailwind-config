@@ -21,8 +21,6 @@
 </template>
 
 <script>
-  import { log } from 'util';
-
   export default {
     name: 'Preview',
     props: {
@@ -88,7 +86,9 @@
        * @return {String} The CSS to be inserted in the iframe
        */
       async getStyles() {
-        const styles = await import('!to-string-loader!css-loader!postcss-loader!../assets/scss/tailwind.config.css');
+        const styles = await import('!css-loader!postcss-loader!../assets/scss/tailwind.config.css');
+
+        console.log(styles);
 
         return styles.default;
       },

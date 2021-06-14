@@ -33,12 +33,6 @@ module.exports = {
     /**
      * Colors
      */
-    colors: {
-      transparent: 'transparent',
-      white: '#fff',
-      black: '#000',
-      current: 'currentColor',
-    },
     textColor: (theme) => theme('colors'),
     backgroundColor: (theme) => theme('colors'),
     fill: (theme) => theme('colors'),
@@ -74,7 +68,23 @@ module.exports = {
       },
     },
 
+    /**
+     * Font smoothing
+     */
+    fontSmoothingPlugin: 'antialiased',
+
+    /**
+     * Extend
+     */
     extend: {
+      /**
+       * Colors
+       */
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+      },
+
       /**
        * Timing functions extension
        */
@@ -124,8 +134,9 @@ module.exports = {
     require('./plugins/breakpoint'),
     require('./plugins/debug-outline')(),
     require('./plugins/display')(),
-    require('./plugins/font-face')(),
     require('./plugins/grid')(),
+    require('./plugins/font-face')(),
+    require('./plugins/font-smoothing'),
     /**
      * Tailwind CSS typograpy plugin.
      * @see   https://github.com/benface/tailwindcss-typography
