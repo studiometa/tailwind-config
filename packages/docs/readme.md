@@ -2,8 +2,9 @@
 home: true
 heroText: 'Tailwind CSS configuration'
 tagline: A custom tailor made Tailwind CSS configuration.
-actionText: Get Started →
-actionLink: /guide/
+actions:
+  - text: Get Started →
+    link: /guide/
 features:
 - title: Default configuration
   details: A default configuration following Studio Meta's workflows.

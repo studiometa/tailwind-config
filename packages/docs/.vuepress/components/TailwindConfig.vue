@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="search-box" style="display: block; margin-bottom: 2em;">
+    <div class="search-box" style="display: block; margin-bottom: 2em; margin-left: 0;">
       <input
         ref="search"
         v-model="search"
         type="search"
-        style="width: 100%;"
+        style="width: 100%"
         placeholder="Search by key: theme.colors.black"
         @input="filter">
     </div>
@@ -24,7 +24,7 @@
     props: {
       config: {
         type: Object,
-        default: () => TAILWIND_CONFIG,
+        default: () => JSON.parse(TAILWIND_CONFIG),
       },
     },
     data() {
@@ -52,7 +52,9 @@
       filter() {
         clearTimeout(this.filterTimer);
         this.filterTimer = setTimeout(() => {
-          const filteredKeys = fuzzysort.go(this.search, this.flattenedKeys).map(({ target }) => target);
+          const filteredKeys = fuzzysort
+            .go(this.search, this.flattenedKeys)
+            .map(({ target }) => target);
           const filtered = filteredKeys.reduce((acc, key) => {
             acc[key] = this.flattened[key];
             return acc;
@@ -72,32 +74,6 @@
         this.formatted = Prism.highlight(content, Prism.languages.js, 'js');
       },
       /**
-       * Recursively transform deep nested object into array if all their keys are numbers.
-       *
-       * @param  {mixed} value The value to transform
-       * @return {mixed}       The transformed value
-       */
-      transformToArray(value) {
-        const type = Object.prototype.toString.call(value);
-        const isObject = type === '[object Object]';
-
-        if (!isObject) {
-          return value;
-        }
-
-        const textKeys = Object.keys(value).filter((key) => Number.isNaN(Number(key)));
-        const shouldBeArray = textKeys.length <= 0;
-
-        if (shouldBeArray) {
-          return Object.values(value);
-        }
-
-        return Object.entries(value).reduce((acc, [ key, val ]) => {
-          acc[key] = this.transformToArray(val);
-          return acc;
-        }, {});
-      },
-      /**
        * Flatten an object.
        *
        * @param  {Object} obj The object to flatten.
@@ -115,11 +91,9 @@
        * @return {Object}     An unflattened object.
        */
       unflatten(obj) {
-        return this.transformToArray(
-          unflatten(obj, {
-            object: true,
-          }),
-        );
+        return unflatten(obj, {
+          object: true,
+        });
       },
     },
   };

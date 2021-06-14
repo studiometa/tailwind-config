@@ -1,3 +1,5 @@
 /node_modules
-/tests/dist/
-/docs/.vuepress/dist/
+/packages/tests/dist/
+/packages/docs/.vuepress/dist/
+/packages/docs/.vuepress/.cache/
+/packages/docs/.vuepress/.temp/
