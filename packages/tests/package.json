@@ -9,6 +9,7 @@
     "@studiometa/webpack-config": "^2.9.2"
   },
   "dependencies": {
+    "@studiometa/tailwind-config": "file:../tailwind-config",
     "postcss": "^8.3.4"
   }
 }
