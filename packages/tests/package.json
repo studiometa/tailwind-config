@@ -1,0 +1,14 @@
+{
+  "name": "@studiometa/tailwind-config-tests",
+  "private": true,
+  "scripts": {
+    "dev": "meta dev",
+    "build": "meta build"
+  },
+  "devDependencies": {
+    "@studiometa/webpack-config": "^2.9.2"
+  },
+  "dependencies": {
+    "postcss": "^8.3.4"
+  }
+}

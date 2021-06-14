@@ -1,55 +1,20 @@
 {
-  "name": "@studiometa/tailwind-config",
+  "name": "@studiometa/tailwind-config-root",
+  "workspaces": [
+    "packages/**/*"
+  ],
   "version": "1.0.2",
   "description": "A custom Tailwind CSS config",
-  "main": "src/index.js",
+  "private": true,
   "scripts": {
-    "test": "npm run lint && npm run test:build && echo \"\\033[0;37mAll test passed! 🎉\n\" && exit 0",
-    "test:build": "if npm run style:build 2>&1 >/dev/null | tee tmp | grep -q 'Error'; then cat tmp && rm tmp && exit 1; else rm tmp && exit 0; fi;",
-    "style:build": "rm -rf tests/dist && parcel build tests/src/*.css --out-dir tests/dist --no-cache --no-minify --no-source-maps",
-    "lint": "eslint src/",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "lint": "eslint packages/",
+    "docs:dev": "npm run dev --workspace=@studiometa/tailwind-config-docs",
+    "docs:build": "npm run build --workspace=@studiometa/tailwind-config-docs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/studiometa/tailwind-config.git"
-  },
-  "author": "Studio Meta <agence@studiometa.fr> (https://www.studiometa.fr)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/studiometa/tailwind-config/issues"
-  },
-  "homepage": "https://github.com/studiometa/tailwind-config#readme",
   "devDependencies": {
     "@studiometa/eslint-config": "^2.1.0",
     "@studiometa/prettier-config": "^2.0.1",
-    "@tailwindcss/postcss7-compat": "^2.0.3",
-    "autoprefixer": "^9.8.6",
     "eslint": "^7.0.0",
-    "flat": "^5.0.0",
-    "fuzzysort": "^1.1.4",
-    "parcel": "^1.12.4",
-    "postcss": "^7.0.35",
-    "prettier": "^2.0.5",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
-    "to-string-loader": "^1.1.6",
-    "vuepress": "^1.2.0"
-  },
-  "dependencies": {
-    "lodash.max": "^4.0.1",
-    "lodash.range": "^3.2.0",
-    "postcss-loader": "^4.0.3",
-    "tailwindcss-typography": ">=3.0.0"
-  },
-  "peerDependencies": {
-    "postcss": "^8.2.6",
-    "tailwindcss": ">=1.4.6 || >=2.0.3"
-  },
-  "engines": {
-    "node": ">=12.13.0"
-  },
-  "publishConfig": {
-    "access": "public"
+    "prettier": "^2.0.5"
   }
 }
