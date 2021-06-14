@@ -1,6 +1,6 @@
 {
   "name": "@studiometa/tailwind-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A custom Tailwind CSS config",
   "main": "index.js",
   "repository": {

@@ -1,5 +1,6 @@
 {
   "name": "@studiometa/tailwind-config-tests",
+  "version": "1.0.3",
   "private": true,
   "scripts": {
     "dev": "meta dev",
