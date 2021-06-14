@@ -16,7 +16,6 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: cd packages/tailwind-config
-      - run: npm publish
+      - run: cd packages/tailwind-config && npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
