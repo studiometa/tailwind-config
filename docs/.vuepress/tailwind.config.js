@@ -14,7 +14,11 @@ module.exports = {
         default: '#fff'
       }
     }
-  }
+  },
+  purge: {
+    content: ['**/*.md'],
+  },
+  mode: 'jit',
 }
 
 config.theme.debugOutline = true;
