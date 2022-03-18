@@ -14,8 +14,9 @@
     "fuzzysort": "^1.2.1",
     "postcss": "^8.4.12",
     "sass-loader": "^12.6.0",
-    "tailwindcss": "^2.2.19",
+    "tailwindcss": "^3.0.23",
+    "vue-loader": "^16.8.3",
     "vuepress": "^2.0.0-beta.36",
-    "vue-loader": "^16.8.3"
+    "vuepress-webpack": "^2.0.0-beta.36"
   }
 }
