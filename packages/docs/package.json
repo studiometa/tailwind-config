@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@studiometa/tailwind-config": "file:../tailwind-config",
+    "@vuepress/bundler-webpack": "^2.0.0-beta.36",
     "@vuepress/plugin-register-components": "^2.0.0-beta.36",
     "@vuepress/plugin-search": "^2.0.0-beta.36",
     "flat": "^5.0.2",
