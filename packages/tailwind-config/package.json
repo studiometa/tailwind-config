@@ -1,6 +1,6 @@
 {
   "name": "@studiometa/tailwind-config",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "A custom Tailwind CSS config",
   "main": "index.js",
   "repository": {
@@ -20,7 +20,7 @@
   },
   "peerDependencies": {
     "postcss": "^8.2.6",
-    "tailwindcss": "^1.4.6 || ^2.1.4"
+    "tailwindcss": "^1.4.6 || ^2.1.4 || ^3"
   },
   "engines": {
     "node": ">=12.13.0"
