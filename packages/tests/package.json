@@ -7,10 +7,10 @@
     "build": "meta build"
   },
   "devDependencies": {
-    "@studiometa/webpack-config": "^2.9.2"
+    "@studiometa/webpack-config": "^3.1.0"
   },
   "dependencies": {
     "@studiometa/tailwind-config": "file:../tailwind-config",
-    "postcss": "^8.3.4"
+    "postcss": "^8.4.12"
   }
 }
