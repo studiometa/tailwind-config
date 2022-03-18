@@ -1,5 +1,5 @@
 const resolveConfig = require('tailwindcss/resolveConfig');
-const config = require('@studiometa/tailwind-config');
+const config = require('../../tailwind.config.js');
 const resolvedConfig = resolveConfig(config);
 
 // Use the function's name for plugins which are not exposing an object

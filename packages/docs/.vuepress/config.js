@@ -39,6 +39,7 @@ module.exports = {
       },
     ],
   ],
+  bundler: '@vuepress/bundler-webpack',
   bundlerConfig: {
     postcss: {
       postcssOptions: {
