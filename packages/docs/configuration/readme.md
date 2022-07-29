@@ -171,7 +171,6 @@ module.exports = {
 
 - [Breakpoint](/plugins/breakpoint.html) to exposes the `screens` configuration in the CSS
 - [Debug outline](/plugins/debug-outline.html) to help debug layout
-- [Display](/plugins/display.html) to fix a naming convention conflict between our [grid plugin](/plugins/grid.html) and the official [grid display](https://tailwindcss.com/docs/display/#grid)
 - [Font-Face](/plugins/font-face.html) to easily add custom `@font-face` declarations
 - [Grid](/plugins/grid.html) to add some grid classes
 - [Typography](/plugins/typography.html) to improve the typography utilities

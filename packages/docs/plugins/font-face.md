@@ -1,6 +1,6 @@
 ---
 sidebar: auto
-prev: ./display.html
+prev: ./debug-outline.html
 next: ./grid.html
 ---
 

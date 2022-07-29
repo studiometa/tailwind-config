@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 prev: ./breakpoint.html
-next: ./display.html
+next: ./font-face.html
 ---
 
 # Debug Outline
