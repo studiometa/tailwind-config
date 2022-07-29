@@ -161,6 +161,7 @@ module.exports = {
         l: 3,
         xxl: 4,
       },
+      prefix: 'legacy-',
     },
   },
 };
