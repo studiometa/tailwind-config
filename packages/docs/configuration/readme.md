@@ -56,12 +56,14 @@ module.exports = {
 ```js{3-9}
 module.exports = {
   theme: {
-    zIndex: {
-      goku: '9000',
-      above: '2',
-      default: '1',
-      under: '-1',
-      limbo: '-999',
+    extend: {
+      zIndex: {
+        goku: '9000',
+        above: '2',
+        default: '1',
+        under: '-1',
+        limbo: '-999',
+      },
     },
   },
 };

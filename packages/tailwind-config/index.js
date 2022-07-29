@@ -31,17 +31,6 @@ module.exports = {
     },
 
     /**
-     * Layer
-     */
-    zIndex: {
-      goku: '9000',
-      above: '2',
-      default: '1',
-      under: '-1',
-      limbo: '-999',
-    },
-
-    /**
      * Debug
      */
     debugOutline: false,
@@ -67,6 +56,15 @@ module.exports = {
      * Extend
      */
     extend: {
+      /**
+       * Layer
+       */
+      zIndex: {
+        goku: '9000',
+        above: '2',
+        default: '1',
+        under: '-1',
+        limbo: '-999',
       },
 
       /**
