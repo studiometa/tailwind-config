@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 prev: ./grid.html
-next: false
+next: /utils/generate-z-indexes.html
 ---
 
 # Typography <Badge>Third party</Badge>

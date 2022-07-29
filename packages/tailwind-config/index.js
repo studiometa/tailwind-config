@@ -1,3 +1,5 @@
+const generateZIndexes = require('./utils/generateZIndexes');
+
 /**
  * Studio Meta tailwind-config
  *
@@ -9,7 +11,7 @@
  * @see https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  *
  */
-module.exports = {
+const config = {
   theme: {
     /**
      * Container
@@ -121,4 +123,9 @@ module.exports = {
       componentPrefix: 'type-',
     }),
   ],
+};
+
+module.exports = {
+  config,
+  generateZIndexes,
 };

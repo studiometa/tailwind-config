@@ -162,6 +162,10 @@ module.exports = {
 - [Grid](/plugins/grid.html) to add some grid classes
 - [Typography](/plugins/typography.html) to improve the typography utilities
 
+## Utilities
+
+- [Function `generateZIndexes()`](/utils/generate-z-indexes.html) to generate `under` and `above` values to given layers
+
 ---
 
 ## Configuration reference

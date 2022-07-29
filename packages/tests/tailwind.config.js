@@ -1,4 +1,4 @@
-const config = require('@studiometa/tailwind-config');
+const { config, generateZIndexes } = require('@studiometa/tailwind-config');
 
 module.exports = {
   presets: [config],
@@ -29,5 +29,12 @@ module.exports = {
         letterSpacing: '1px',
       },
     }),
+    extend: {
+      zIndex: {
+        ...generateZIndexes({
+          menu: 600,
+        }),
+      },
+    },
   },
 };
