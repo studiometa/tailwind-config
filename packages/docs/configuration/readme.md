@@ -51,33 +51,6 @@ module.exports = {
 
 [Documentation](https://tailwindcss.com/docs/theme/#screens)
 
-### Colors
-
-```js{3-14}
-module.exports = {
-  theme: {
-    colors: {
-      transparent: 'transparent',
-      white: '#fff',
-      black: '#000',
-      current: 'currentColor',
-    },
-    textColor: theme => theme('colors'),
-    backgroundColor: theme => theme('colors'),
-    fill: theme => theme('colors'),
-    borderColor: theme => theme('colors'),
-    placeholderColor: theme => theme('colors'),
-    stroke: theme => theme('colors'),
-  },
-};
-```
-
-[Documentation](https://tailwindcss.com/docs/theme/#colors)
-
-::: tip
-You should add colors to your project via the `theme.extend` property to not override these defaults.
-:::
-
 ### Layers
 
 ```js{3-9}

@@ -31,16 +31,6 @@ module.exports = {
     },
 
     /**
-     * Colors
-     */
-    textColor: (theme) => theme('colors'),
-    backgroundColor: (theme) => theme('colors'),
-    fill: (theme) => theme('colors'),
-    borderColor: (theme) => theme('colors'),
-    placeholderColor: (theme) => theme('colors'),
-    stroke: (theme) => theme('colors'),
-
-    /**
      * Layer
      */
     zIndex: {
@@ -77,12 +67,6 @@ module.exports = {
      * Extend
      */
     extend: {
-      /**
-       * Colors
-       */
-      colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
       },
 
       /**
