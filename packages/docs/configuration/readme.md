@@ -166,18 +166,6 @@ module.exports = {
 };
 ```
 
-## Variants
-
-We only disable the `hover` and `focus` variants for the `font-weight` utility classes, as it is not recommended to transition between font weights.
-
-```js{3}
-module.exports = {
-  variants: {
-    fontWeight: ['responsive'],
-  },
-};
-```
-
 ## Plugins
 
 - [Breakpoint](/plugins/breakpoint.html) to exposes the `screens` configuration in the CSS

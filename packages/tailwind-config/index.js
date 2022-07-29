@@ -106,9 +106,6 @@ module.exports = {
       },
     },
   },
-  variants: {
-    fontWeight: ['responsive'],
-  },
   corePlugins: {
     display: false,
   },
