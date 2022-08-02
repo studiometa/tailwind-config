@@ -1,5 +1,3 @@
-const generateZIndexes = require('./utils/generateZIndexes');
-
 /**
  * Studio Meta tailwind-config
  *
@@ -10,6 +8,29 @@ const generateZIndexes = require('./utils/generateZIndexes');
  * Full tailwind default config file
  * @see https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  *
+ */
+
+/**
+ * Utils
+ */
+const generateZIndexes = require('./utils/generateZIndexes');
+
+/**
+ * Breakpoints
+ */
+const screens = {
+  xxs: '0px',
+  xs: '480px',
+  s: '768px',
+  m: '1024px',
+  l: '1280px',
+  xl: '1440px',
+  xxl: '1920px',
+  xxxl: '2560px',
+};
+
+/**
+ * Config
  */
 const config = {
   theme: {
@@ -23,14 +44,7 @@ const config = {
     /**
      * Breakpoints
      */
-    screens: {
-      xs: '480px',
-      s: '768px',
-      m: '1024px',
-      l: '1280px',
-      xl: '1440px',
-      xxl: '1920px',
-    },
+    screens,
 
     /**
      * Debug
@@ -127,5 +141,6 @@ const config = {
 
 module.exports = {
   config,
+  screens,
   generateZIndexes,
 };

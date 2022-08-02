@@ -38,12 +38,14 @@ module.exports = {
 module.exports = {
   theme: {
     screens: {
+      xxs: '0px',
       xs: '480px',
       s: '768px',
       m: '1024px',
       l: '1280px',
       xl: '1440px',
       xxl: '1920px',
+      xxxl: '2560px',
     },
   },
 };
