@@ -79,40 +79,40 @@ The CSS unit used for the gutters.
 - Type: `String`
 - Default : `''`
 
-The prefix used by the plugin to prevent conflicts with other classes. It defaults to `legacy-`.
+The prefix used by the plugin to prevent conflicts with other classes. It defaults to `float-`.
 
 ## Classes
 
 ### Container
 
-|       Class       | Description | Variants |
-|-------------------|-------------|----------|
-| `.legacy-grid`           | @todo       | `[]`     |
-| `.legacy-grid-nested`    | @todo       | `[]`     |
-| `.legacy-grid-no-gutter` | @todo       | `[]`     |
+|          Class          | Description | Variants |
+|-------------------------|-------------|----------|
+| `.float-grid`           | @todo       | `[]`     |
+| `.float-grid-nested`    | @todo       | `[]`     |
+| `.float-grid-no-gutter` | @todo       | `[]`     |
 
 ### Row
 
-|        Class        | Description |   Variants   |
-|---------------------|-------------|--------------|
-| `.legacy-grid-row`         | @todo       | `responsive` |
-| `.legacy-grid-row-start`   | @todo       | `responsive` |
-| `.legacy-grid-row-center`  | @todo       | `responsive` |
-| `.legacy-grid-row-end`     | @todo       | `responsive` |
-| `.legacy-grid-row-stretch` | @todo       | `responsive` |
+|           Class           | Description |   Variants   |
+|---------------------------|-------------|--------------|
+| `.float-grid-row`         | @todo       | `responsive` |
+| `.float-grid-row-start`   | @todo       | `responsive` |
+| `.float-grid-row-center`  | @todo       | `responsive` |
+| `.float-grid-row-end`     | @todo       | `responsive` |
+| `.float-grid-row-stretch` | @todo       | `responsive` |
 
 ### Columns
 
-|        Class         | Description |   Variants   |
-|----------------------|-------------|--------------|
-| `.legacy-grid-pull-<count>` | @todo       | `responsive` |
-| `.legacy-grid-push-<count>` | @todo       | `responsive` |
-| `.legacy-grid-col-<count>`  | @todo       | `responsive` |
-| `.legacy-grid-col-center`   | @todo       | `responsive` |
-| `.legacy-grid-col-clear`    | @todo       | `responsive` |
-| `.legacy-grid-col-left`     | @todo       | `responsive` |
-| `.legacy-grid-col-no-clear` | @todo       | `responsive` |
-| `.legacy-grid-col-right`    | @todo       | `responsive` |
+|           Class            | Description |   Variants   |
+|----------------------------|-------------|--------------|
+| `.float-grid-pull-<count>` | @todo       | `responsive` |
+| `.float-grid-push-<count>` | @todo       | `responsive` |
+| `.float-grid-col-<count>`  | @todo       | `responsive` |
+| `.float-grid-col-center`   | @todo       | `responsive` |
+| `.float-grid-col-clear`    | @todo       | `responsive` |
+| `.float-grid-col-left`     | @todo       | `responsive` |
+| `.float-grid-col-no-clear` | @todo       | `responsive` |
+| `.float-grid-col-right`    | @todo       | `responsive` |
 
 
 ## Examples
@@ -120,100 +120,100 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
 ### Simple
 
 <Preview>
-  <div class="legacy-grid">
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-1">
+  <div class="float-grid">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-2">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-3">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="legacy-grid-col-3">
+      <div class="float-grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="legacy-grid-col-3">
+      <div class="float-grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="legacy-grid-col-3">
+      <div class="float-grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-4">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
-      <div class="legacy-grid-col-4">
+      <div class="float-grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
-      <div class="legacy-grid-col-4">
+      <div class="float-grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-6">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-6">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
       </div>
-      <div class="legacy-grid-col-6">
+      <div class="float-grid-col-6">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-12">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-12">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
       </div>
     </div>
@@ -221,100 +221,100 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
 </Preview>
 
 ```html
-<div class="legacy-grid">
-  <div class="legacy-grid-row mb-2">
-    <div class="legacy-grid-col-1">
+<div class="float-grid">
+  <div class="float-grid-row mb-2">
+    <div class="float-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="legacy-grid-col-1">
+    <div class="float-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="legacy-grid-col-1">
+    <div class="float-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="legacy-grid-col-1">
+    <div class="float-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="legacy-grid-col-1">
+    <div class="float-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="legacy-grid-col-1">
+    <div class="float-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="legacy-grid-col-1">
+    <div class="float-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="legacy-grid-col-1">
+    <div class="float-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="legacy-grid-col-1">
+    <div class="float-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="legacy-grid-col-1">
+    <div class="float-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="legacy-grid-col-1">
+    <div class="float-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
-    <div class="legacy-grid-col-1">
+    <div class="float-grid-col-1">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
     </div>
   </div>
-  <div class="legacy-grid-row mb-2">
-    <div class="legacy-grid-col-2">
+  <div class="float-grid-row mb-2">
+    <div class="float-grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="legacy-grid-col-2">
+    <div class="float-grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="legacy-grid-col-2">
+    <div class="float-grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="legacy-grid-col-2">
+    <div class="float-grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="legacy-grid-col-2">
+    <div class="float-grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
-    <div class="legacy-grid-col-2">
+    <div class="float-grid-col-2">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
     </div>
   </div>
-  <div class="legacy-grid-row mb-2">
-    <div class="legacy-grid-col-3">
+  <div class="float-grid-row mb-2">
+    <div class="float-grid-col-3">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
     </div>
-    <div class="legacy-grid-col-3">
+    <div class="float-grid-col-3">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
     </div>
-    <div class="legacy-grid-col-3">
+    <div class="float-grid-col-3">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
     </div>
-    <div class="legacy-grid-col-3">
+    <div class="float-grid-col-3">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
     </div>
   </div>
-  <div class="legacy-grid-row mb-2">
-    <div class="legacy-grid-col-4">
+  <div class="float-grid-row mb-2">
+    <div class="float-grid-col-4">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
     </div>
-    <div class="legacy-grid-col-4">
+    <div class="float-grid-col-4">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
     </div>
-    <div class="legacy-grid-col-4">
+    <div class="float-grid-col-4">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
     </div>
   </div>
-  <div class="legacy-grid-row mb-2">
-    <div class="legacy-grid-col-6">
+  <div class="float-grid-row mb-2">
+    <div class="float-grid-col-6">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
     </div>
-    <div class="legacy-grid-col-6">
+    <div class="float-grid-col-6">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
     </div>
   </div>
-  <div class="legacy-grid-row mb-2">
-    <div class="legacy-grid-col-12">
+  <div class="float-grid-row mb-2">
+    <div class="float-grid-col-12">
       <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
     </div>
   </div>
@@ -324,100 +324,100 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
 ### No gutter
 
 <Preview>
-  <div class="legacy-grid legacy-grid-no-gutter">
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-1">
+  <div class="float-grid float-grid-no-gutter">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-2">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-3">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="legacy-grid-col-3">
+      <div class="float-grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="legacy-grid-col-3">
+      <div class="float-grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="legacy-grid-col-3">
+      <div class="float-grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-4">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
-      <div class="legacy-grid-col-4">
+      <div class="float-grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
-      <div class="legacy-grid-col-4">
+      <div class="float-grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-6">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-6">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
       </div>
-      <div class="legacy-grid-col-6">
+      <div class="float-grid-col-6">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-12">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-12">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
       </div>
     </div>
@@ -425,7 +425,7 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
 </Preview>
 
 ```html
-<div class="legacy-grid legacy-grid-no-gutter">
+<div class="float-grid float-grid-no-gutter">
   ...
 </div>
 ```
@@ -433,100 +433,100 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
 ### Nested
 
 <Preview>
-  <div class="legacy-grid legacy-grid-nested">
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-1">
+  <div class="float-grid float-grid-nested">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-2">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
-      <div class="legacy-grid-col-2">
+      <div class="float-grid-col-2">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">2</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-3">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="legacy-grid-col-3">
+      <div class="float-grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="legacy-grid-col-3">
+      <div class="float-grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
-      <div class="legacy-grid-col-3">
+      <div class="float-grid-col-3">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">3</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-4">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
-      <div class="legacy-grid-col-4">
+      <div class="float-grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
-      <div class="legacy-grid-col-4">
+      <div class="float-grid-col-4">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">4</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-6">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-6">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
       </div>
-      <div class="legacy-grid-col-6">
+      <div class="float-grid-col-6">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">6</div>
       </div>
     </div>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-12">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-12">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">12</div>
       </div>
     </div>
@@ -534,7 +534,7 @@ The prefix used by the plugin to prevent conflicts with other classes. It defaul
 </Preview>
 
 ```html
-<div class="legacy-grid legacy-grid-nested">
+<div class="float-grid float-grid-nested">
   ...
 </div>
 ```
@@ -585,43 +585,43 @@ The grid plugin can be replaced with Tailwind utility classes for expert users:
       </div>
     </div>
   </div>
-  <div class="legacy-grid">
+  <div class="float-grid">
     <p class="mb-2">Grid plugin</p>
-    <div class="legacy-grid-row mb-2">
-      <div class="legacy-grid-col-1">
+    <div class="float-grid-row mb-2">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
-      <div class="legacy-grid-col-1">
+      <div class="float-grid-col-1">
         <div class="h-4 text-grey-600 bg-white flex items-center justify-center">1</div>
       </div>
     </div>

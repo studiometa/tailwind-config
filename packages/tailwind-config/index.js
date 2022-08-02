@@ -47,7 +47,7 @@ const config = {
         l: 3,
         xxl: 4,
       },
-      prefix: 'legacy-',
+      prefix: 'float-',
     },
 
     /**
