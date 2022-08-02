@@ -135,18 +135,6 @@ module.exports = {
 
 [Documentation](https://tailwindcss.com/docs/top-right-bottom-left/)
 
-### Debug outline
-
-The [debug outline plugin](#debug-outline-2) is disabled by default.
-
-```js{3}
-module.exports = {
-  theme: {
-    debugOutline: false,
-  },
-};
-```
-
 ### Grid
 
 The [grid plugin](#grid-2) has the following defaults:
@@ -170,7 +158,6 @@ module.exports = {
 ## Plugins
 
 - [Breakpoint](/plugins/breakpoint.html) to exposes the `screens` configuration in the CSS
-- [Debug outline](/plugins/debug-outline.html) to help debug layout
 - [Font-Face](/plugins/font-face.html) to easily add custom `@font-face` declarations
 - [Grid](/plugins/grid.html) to add some grid classes
 - [Typography](/plugins/typography.html) to improve the typography utilities

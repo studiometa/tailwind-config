@@ -109,7 +109,6 @@ module.exports = {
   },
   plugins: [
     require('./plugins/breakpoint'),
-    require('./plugins/debug-outline')(),
     require('./plugins/grid')(),
     require('./plugins/font-face')(),
     require('./plugins/font-smoothing'),
