@@ -60,11 +60,9 @@ module.exports = {
   theme: {
     extend: {
       zIndex: {
-        goku: '9000',
-        above: '2',
-        default: '1',
-        under: '-1',
-        limbo: '-999',
+        '-1': '-1',
+        1: '1',
+        2: '2',
       },
     },
   },
@@ -163,10 +161,6 @@ module.exports = {
 - [Font-Face](/plugins/font-face.html) to easily add custom `@font-face` declarations
 - [Grid](/plugins/grid.html) to add some grid classes
 - [Typography](/plugins/typography.html) to improve the typography utilities
-
-## Utilities
-
-- [Function `generateZIndexes()`](/utils/generate-z-indexes.html) to generate `under` and `above` values to given layers
 
 ---
 

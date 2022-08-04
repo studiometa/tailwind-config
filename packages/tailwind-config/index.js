@@ -11,11 +11,6 @@
  */
 
 /**
- * Utils
- */
-const generateZIndexes = require('./utils/generateZIndexes');
-
-/**
  * Breakpoints
  */
 const screens = {
@@ -77,11 +72,9 @@ const config = {
        * Layer
        */
       zIndex: {
-        goku: '9000',
-        above: '2',
-        default: '1',
-        under: '-1',
-        limbo: '-999',
+        '-1': '-1',
+        1: '1',
+        2: '2',
       },
 
       /**
@@ -142,5 +135,4 @@ const config = {
 module.exports = {
   config,
   screens,
-  generateZIndexes,
 };
