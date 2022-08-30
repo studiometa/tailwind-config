@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 prev: /configuration/
-next: ./debug-outline.html
+next: ./font-face.html
 ---
 
 # Breakpoint

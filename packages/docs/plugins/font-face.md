@@ -1,6 +1,6 @@
 ---
 sidebar: auto
-prev: ./display.html
+prev: ./breakpoint.html
 next: ./grid.html
 ---
 

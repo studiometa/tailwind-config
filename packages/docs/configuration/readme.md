@@ -38,12 +38,14 @@ module.exports = {
 module.exports = {
   theme: {
     screens: {
+      xxs: '0px',
       xs: '480px',
       s: '768px',
       m: '1024px',
       l: '1280px',
       xl: '1440px',
       xxl: '1920px',
+      xxxl: '2560px',
     },
   },
 };
@@ -51,44 +53,17 @@ module.exports = {
 
 [Documentation](https://tailwindcss.com/docs/theme/#screens)
 
-### Colors
-
-```js{3-14}
-module.exports = {
-  theme: {
-    colors: {
-      transparent: 'transparent',
-      white: '#fff',
-      black: '#000',
-      current: 'currentColor',
-    },
-    textColor: theme => theme('colors'),
-    backgroundColor: theme => theme('colors'),
-    fill: theme => theme('colors'),
-    borderColor: theme => theme('colors'),
-    placeholderColor: theme => theme('colors'),
-    stroke: theme => theme('colors'),
-  },
-};
-```
-
-[Documentation](https://tailwindcss.com/docs/theme/#colors)
-
-::: tip
-You should add colors to your project via the `theme.extend` property to not override these defaults.
-:::
-
 ### Layers
 
 ```js{3-9}
 module.exports = {
   theme: {
-    zIndex: {
-      goku: '9000',
-      above: '2',
-      default: '1',
-      under: '-1',
-      limbo: '-999',
+    extend: {
+      zIndex: {
+        '-1': '-1',
+        1: '1',
+        2: '2',
+      },
     },
   },
 };
@@ -160,18 +135,6 @@ module.exports = {
 
 [Documentation](https://tailwindcss.com/docs/top-right-bottom-left/)
 
-### Debug outline
-
-The [debug outline plugin](#debug-outline-2) is disabled by default.
-
-```js{3}
-module.exports = {
-  theme: {
-    debugOutline: false,
-  },
-};
-```
-
 ### Grid
 
 The [grid plugin](#grid-2) has the following defaults:
@@ -186,19 +149,8 @@ module.exports = {
         l: 3,
         xxl: 4,
       },
+      prefix: 'float-',
     },
-  },
-};
-```
-
-## Variants
-
-We only disable the `hover` and `focus` variants for the `font-weight` utility classes, as it is not recommended to transition between font weights.
-
-```js{3}
-module.exports = {
-  variants: {
-    fontWeight: ['responsive'],
   },
 };
 ```
@@ -206,8 +158,6 @@ module.exports = {
 ## Plugins
 
 - [Breakpoint](/plugins/breakpoint.html) to exposes the `screens` configuration in the CSS
-- [Debug outline](/plugins/debug-outline.html) to help debug layout
-- [Display](/plugins/display.html) to fix a naming convention conflict between our [grid plugin](/plugins/grid.html) and the official [grid display](https://tailwindcss.com/docs/display/#grid)
 - [Font-Face](/plugins/font-face.html) to easily add custom `@font-face` declarations
 - [Grid](/plugins/grid.html) to add some grid classes
 - [Typography](/plugins/typography.html) to improve the typography utilities
