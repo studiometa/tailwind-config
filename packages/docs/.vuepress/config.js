@@ -16,8 +16,6 @@ module.exports = {
         text: 'Plugins',
         children: [
           { text: 'Breakpoint', link: '/plugins/breakpoint.html' },
-          { text: 'Debug outline', link: '/plugins/debug-outline.html' },
-          { text: 'Display', link: '/plugins/display.html' },
           { text: 'Font-Face', link: '/plugins/font-face.html' },
           { text: 'Grid', link: '/plugins/grid.html' },
           { text: 'Typography', link: '/plugins/typography.html' },

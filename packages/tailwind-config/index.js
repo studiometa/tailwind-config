@@ -9,7 +9,25 @@
  * @see https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  *
  */
-module.exports = {
+
+/**
+ * Breakpoints
+ */
+const screens = {
+  xxs: '0px',
+  xs: '480px',
+  s: '768px',
+  m: '1024px',
+  l: '1280px',
+  xl: '1440px',
+  xxl: '1920px',
+  xxxl: '2560px',
+};
+
+/**
+ * Config
+ */
+const config = {
   theme: {
     /**
      * Container
@@ -21,35 +39,7 @@ module.exports = {
     /**
      * Breakpoints
      */
-    screens: {
-      xs: '480px',
-      s: '768px',
-      m: '1024px',
-      l: '1280px',
-      xl: '1440px',
-      xxl: '1920px',
-    },
-
-    /**
-     * Colors
-     */
-    textColor: (theme) => theme('colors'),
-    backgroundColor: (theme) => theme('colors'),
-    fill: (theme) => theme('colors'),
-    borderColor: (theme) => theme('colors'),
-    placeholderColor: (theme) => theme('colors'),
-    stroke: (theme) => theme('colors'),
-
-    /**
-     * Layer
-     */
-    zIndex: {
-      goku: '9000',
-      above: '2',
-      default: '1',
-      under: '-1',
-      limbo: '-999',
-    },
+    screens,
 
     /**
      * Debug
@@ -66,6 +56,7 @@ module.exports = {
         l: 3,
         xxl: 4,
       },
+      prefix: 'float-',
     },
 
     /**
@@ -78,11 +69,12 @@ module.exports = {
      */
     extend: {
       /**
-       * Colors
+       * Layer
        */
-      colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
+      zIndex: {
+        '-1': '-1',
+        1: '1',
+        2: '2',
       },
 
       /**
@@ -124,16 +116,8 @@ module.exports = {
       },
     },
   },
-  variants: {
-    fontWeight: ['responsive'],
-  },
-  corePlugins: {
-    display: false,
-  },
   plugins: [
     require('./plugins/breakpoint'),
-    require('./plugins/debug-outline')(),
-    require('./plugins/display')(),
     require('./plugins/grid')(),
     require('./plugins/font-face')(),
     require('./plugins/font-smoothing'),
@@ -146,4 +130,9 @@ module.exports = {
       componentPrefix: 'type-',
     }),
   ],
+};
+
+module.exports = {
+  config,
+  screens,
 };
