@@ -17,6 +17,6 @@
     "@studiometa/eslint-config": "^2.1.3",
     "@studiometa/prettier-config": "^2.1.1",
     "eslint": "^7.32.0",
-    "prettier": "^2.6.0"
+    "prettier": "^2.7.1"
   }
 }
