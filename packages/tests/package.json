@@ -12,6 +12,6 @@
   },
   "dependencies": {
     "@studiometa/tailwind-config": "file:../tailwind-config",
-    "postcss": "^8.4.18"
+    "postcss": "^8.4.31"
   }
 }
