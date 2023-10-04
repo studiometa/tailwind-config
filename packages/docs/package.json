@@ -13,7 +13,7 @@
     "@vuepress/plugin-search": "^2.0.0-beta.36",
     "flat": "^5.0.2",
     "fuzzysort": "^1.9.0",
-    "postcss": "^8.4.18",
+    "postcss": "^8.4.31",
     "sass-loader": "^12.6.0",
     "tailwindcss": "^3.2.1",
     "vue-loader": "^16.8.3",
