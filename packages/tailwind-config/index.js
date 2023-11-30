@@ -121,6 +121,7 @@ const config = {
     require('./plugins/grid')(),
     require('./plugins/font-face')(),
     require('./plugins/font-smoothing'),
+    require('./plugins/variants-factory'),
     /**
      * Tailwind CSS typograpy plugin.
      * @see   https://github.com/benface/tailwindcss-typography
