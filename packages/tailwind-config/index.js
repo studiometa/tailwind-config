@@ -65,6 +65,13 @@ const config = {
     fontSmoothingPlugin: 'antialiased',
 
     /**
+     * Custom variants for the variants factory
+     */
+    customVariants: {
+      children: '& > *',
+    },
+
+    /**
      * Extend
      */
     extend: {
