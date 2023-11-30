@@ -6,7 +6,7 @@ next: ./typography.html
 
 # Variants factory
 
-The variants factory plugin creates simple custom variants on the go and simply is a shorthand for [`addVariant` Tailwind plugin](https://tailwindcss.com/docs/plugins) default functionality.
+The variants factory plugin creates simple custom variants on the go and simply is a shorthand for [`addVariant` Tailwind plugin](https://tailwindcss.com/docs/plugins#adding-variants) default functionality.
 
 ## Configuration
 
