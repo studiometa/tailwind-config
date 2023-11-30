@@ -160,6 +160,7 @@ module.exports = {
 - [Breakpoint](/plugins/breakpoint.html) to exposes the `screens` configuration in the CSS
 - [Font-Face](/plugins/font-face.html) to easily add custom `@font-face` declarations
 - [Grid](/plugins/grid.html) to add some grid classes
+- [Variants Factory](/plugins/variants-factory.html) to add custom variants on the go
 - [Typography](/plugins/typography.html) to improve the typography utilities
 
 ---

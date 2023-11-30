@@ -13,9 +13,18 @@ Have a look at the [small guide](https://tailwind-config.meta.fr) for informatio
 This project uses [Git Flow](https://github.com/petervanderdoes/gitflow-avh) as a branching model and a combination of [ESlint](https://eslint.org/) and [Prettier](https://prettier.io/) to lint the JS files. You can lint your modifications when contributing with the following commands:
 
 ```bash
-# Lint all files in the src/ folder
+# Lint all files in the packages/ folder
 $ npm run lint
 
-# Lint files and test build files
-$ npm run test
+# Start the dev server for the test's assets
+$ npm run test:dev
+
+# Build the test's assets
+$ npm run test:build
+
+# Start the dev server for the documentation
+$ npm run docs:dev
+
+# Build the documentation
+$ npm run docs:build
 ```
