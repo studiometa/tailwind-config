@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 prev: ./font-face.html
-next: ./typography.html
+next: ./variants-factory.html
 ---
 
 # Grid
