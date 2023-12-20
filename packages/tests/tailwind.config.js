@@ -29,5 +29,17 @@ module.exports = {
         letterSpacing: '1px',
       },
     }),
+    extend: {
+      customContainer: {
+        padding: {
+          DEFAULT: '1rem',
+          m: '2rem',
+        },
+        maxWidth: {
+          DEFAULT: '80rem',
+          xxl: '94rem',
+        },
+      },
+    },
   },
 };

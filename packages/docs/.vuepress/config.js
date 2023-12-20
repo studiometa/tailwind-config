@@ -18,6 +18,8 @@ module.exports = {
           { text: 'Breakpoint', link: '/plugins/breakpoint.html' },
           { text: 'Font-Face', link: '/plugins/font-face.html' },
           { text: 'Grid', link: '/plugins/grid.html' },
+          { text: 'Custom container', link: '/plugins/custom-container.html' },
+          { text: 'Variants factory', link: '/plugins/variants-factory.html' },
           { text: 'Typography', link: '/plugins/typography.html' },
         ],
       },

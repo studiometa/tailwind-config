@@ -16,21 +16,24 @@ Discover the [full config reference](./reference.md) for a quick overview of wha
 
 ## Theme
 
-### Container
+### Custom container
 
-The core container plugin is centered by default.
+The [container core plugin](https://tailwindcss.com/docs/container) is disabled and the [custom container plugin](/plugins/custom-container.html) has the following defaults:
 
-```js{3-5}
+```js{3-7}
 module.exports = {
   theme: {
-    container: {
+    customContainer: {
       center: true,
+      padding: '1rem',
+      maxWidth: '80rem',
     },
+  },
+  corePlugins: {
+    container: false,
   },
 };
 ```
-
-[Documentation](https://tailwindcss.com/docs/container#centering-by-default)
 
 ### Screens
 
@@ -137,7 +140,7 @@ module.exports = {
 
 ### Grid
 
-The [grid plugin](#grid-2) has the following defaults:
+The [grid plugin](/plugins/grid.html) has the following defaults:
 
 ```js{3-10}
 module.exports = {
@@ -160,6 +163,8 @@ module.exports = {
 - [Breakpoint](/plugins/breakpoint.html) to exposes the `screens` configuration in the CSS
 - [Font-Face](/plugins/font-face.html) to easily add custom `@font-face` declarations
 - [Grid](/plugins/grid.html) to add some grid classes
+- [Custom container](/plugins/custom-container.html) to add custom container classes
+- [Variants Factory](/plugins/variants-factory.html) to add custom variants on the go
 - [Typography](/plugins/typography.html) to improve the typography utilities
 
 ---

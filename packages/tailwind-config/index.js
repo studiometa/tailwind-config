@@ -32,8 +32,10 @@ const config = {
     /**
      * Container
      */
-    container: {
+    customContainer: {
       center: true,
+      padding: '1rem',
+      maxWidth: '80rem',
     },
 
     /**
@@ -63,6 +65,13 @@ const config = {
      * Font smoothing
      */
     fontSmoothingPlugin: 'antialiased',
+
+    /**
+     * Custom variants for the variants factory
+     */
+    customVariants: {
+      children: '& > *',
+    },
 
     /**
      * Extend
@@ -118,9 +127,11 @@ const config = {
   },
   plugins: [
     require('./plugins/breakpoint'),
+    require('./plugins/custom-container'),
     require('./plugins/grid')(),
     require('./plugins/font-face')(),
     require('./plugins/font-smoothing'),
+    require('./plugins/variants-factory'),
     /**
      * Tailwind CSS typograpy plugin.
      * @see   https://github.com/benface/tailwindcss-typography
@@ -130,6 +141,9 @@ const config = {
       componentPrefix: 'type-',
     }),
   ],
+  corePlugins: {
+    container: false,
+  },
 };
 
 module.exports = {
