@@ -16,21 +16,24 @@ Discover the [full config reference](./reference.md) for a quick overview of wha
 
 ## Theme
 
-### Container
+### Custom container
 
-The core container plugin is centered by default.
+The [container core plugin](https://tailwindcss.com/docs/container) is disabled and the [custom container plugin](/plugins/custom-container.html) has the following defaults:
 
-```js{3-5}
+```js{3-7}
 module.exports = {
   theme: {
-    container: {
+    customContainer: {
       center: true,
+      padding: '1rem',
+      maxWidth: '80rem',
     },
+  },
+  corePlugins: {
+    container: false,
   },
 };
 ```
-
-[Documentation](https://tailwindcss.com/docs/container#centering-by-default)
 
 ### Screens
 
@@ -151,25 +154,6 @@ module.exports = {
       },
       prefix: 'float-',
     },
-  },
-};
-```
-
-### Custom container
-
-The [container core plugin](https://tailwindcss.com/docs/container) is disabled and the [custom container plugin](/plugins/custom-container.html) has the following defaults:
-
-```js{3-7}
-module.exports = {
-  theme: {
-    customContainer: {
-      center: true,
-      padding: '1rem',
-      maxWidth: '80rem',
-    },
-  },
-  corePlugins: {
-    container: false,
   },
 };
 ```
