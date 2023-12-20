@@ -32,8 +32,10 @@ const config = {
     /**
      * Container
      */
-    container: {
+    customContainer: {
       center: true,
+      padding: '1rem',
+      maxWidth: '80rem',
     },
 
     /**
@@ -125,6 +127,7 @@ const config = {
   },
   plugins: [
     require('./plugins/breakpoint'),
+    require('./plugins/custom-container'),
     require('./plugins/grid')(),
     require('./plugins/font-face')(),
     require('./plugins/font-smoothing'),
@@ -138,6 +141,9 @@ const config = {
       componentPrefix: 'type-',
     }),
   ],
+  corePlugins: {
+    container: false,
+  },
 };
 
 module.exports = {

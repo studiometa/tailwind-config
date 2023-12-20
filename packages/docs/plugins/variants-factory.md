@@ -1,6 +1,6 @@
 ---
 sidebar: auto
-prev: ./grid.html
+prev: ./custom-container.html
 next: ./typography.html
 ---
 
