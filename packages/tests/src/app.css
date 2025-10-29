@@ -1,0 +1,15 @@
+/* Fonts */
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+/* Tailwind & Config */
+@import 'tailwindcss';
+@import '@studiometa/tailwind-config';
+
+/* Theme */
+@theme {
+  --color-primary: red;
+  --font-sans: 'Satoshi', sans-serif;
+}
+
+/* Utilities */
+@import './utilities/type.css';
