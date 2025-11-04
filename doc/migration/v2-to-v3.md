@@ -28,7 +28,7 @@ Breakpoints now matches with the default configuration with custom names and add
 - xxl: 1920px
 + 2xl: 96rem (1536px)
 - xxxl: 2560px
-+ 3xl: 120rem (2560px)
++ 3xl: 120rem (1920px)
 ```
 
 ### Layers

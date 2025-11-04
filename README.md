@@ -26,6 +26,18 @@ For more information about the installation and configuration of Tailwind, read 
 
 ## Usage
 
+### Custom breakpoints
+
+- **xs**: `30rem` (480px) — Custom addition
+- **s**: `40rem` (640px) — Same as Tailwind's **sm**
+- **m**: `48rem` (768px) — Same as Tailwind's **md**
+- **l**: `64rem` (1024px) — Same as Tailwind's **lg**
+- **xl**: `80rem` (1280px) — Same as Tailwind's **xl**
+- **2xl**: `96rem` (1536px) — Same as Tailwind's **2xl**
+- **3xl**: `120rem` (1920px) — Custom addition
+
+### File structure
+
 We recommend using different folders to add your custom [styles](https://tailwindcss.com/docs/adding-custom-styles#using-custom-css), [utilities](https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities) and [variants](https://tailwindcss.com/docs/adding-custom-styles#adding-custom-variants).
 
 Example structure and app.css:
