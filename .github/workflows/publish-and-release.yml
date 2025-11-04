@@ -16,7 +16,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           registry-url: https://registry.npmjs.org/
 
       - run: |
@@ -34,7 +34,7 @@ jobs:
       - uses: JS-DevTools/npm-publish@v3
         with:
           provenance: true
-          package: dist/
+          package: packages/tailwind-config/
           tag: ${{ env.NPM_TAG }}
           token: ${{ secrets.NPM_TOKEN }}
 
