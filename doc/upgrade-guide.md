@@ -8,16 +8,25 @@ Here is a list of solutions to keep features of the `@studiometa/tailwind-config
 
 ### Screens
 
-Native Tailwind screens are still overridden with our custom breakpoints and they are unchanged:
+Breakpoints now matches with the default configuration with custom names and additional values:
 
-- xxs: `0px`
-- xs: `480px`
-- s: `768px`
-- m: `1024px`
-- l: `1280px`
-- xl: `1440px`
-- xxl: `1920px`
-- xxxl: `2560px`
+```diff
+- xxs: 0px
+- xs: 480px
++ xs: 30rem (480px)
+- s: 768px
++ s: 40rem (640px)
+- m: 1024px
++ m: 48rem (768px)
+- l: 1280px
++ l: 64rem (1024px)
+- xl: 1440px
++ xl: 80rem (1280px)
+- xxl: 1920px
++ 2xl: 96rem (1536px)
+- xxxl: 2560px
++ 3xl: 120rem (2560px)
+```
 
 ### Layers
 
