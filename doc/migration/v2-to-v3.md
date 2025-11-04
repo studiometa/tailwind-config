@@ -2,7 +2,10 @@
 
 Here is a list of solutions to keep features of the `@studiometa/tailwind-config` v2 after the migration.
 
-> Before upgrading [check the compatibility](https://tailwindcss.com/docs/compatibility) of Tailwind v4 with your project. For all changes between Tailwind v3 and Tailwind v4, refer to the [official upgrade guide](https://tailwindcss.com/docs/upgrade-guide).
+Before upgrading [check the compatibility](https://tailwindcss.com/docs/compatibility) of Tailwind v4 with your project. For all changes between Tailwind v3 and Tailwind v4, refer to the [official upgrade guide](https://tailwindcss.com/docs/upgrade-guide).
+
+> [!IMPORTANT]
+> Tailwind CSS v4.0 is a full-featured CSS build tool designed for a specific workflow, and is [not designed to be used with CSS preprocessors](https://tailwindcss.com/docs/compatibility#sass-less-and-stylus.) like Sass, Less, or Stylus.
 
 ## Theme
 
@@ -46,7 +49,7 @@ All plugins have been removed, check the reasons and alternative solutions below
 
 ### Breakpoint
 
-The breakpoint plugin was used for the breakpoint recognition in the `@studiometa/js-toolkit` but is no longer used since the usage of a config object.
+The breakpoint plugin was used for the breakpoint recognition in the `@studiometa/js-toolkit` but is no longer used since the [usage of a config object](https://js-toolkit.studiometa.dev/guide/migration/v2-to-v3.html#breakpoints-are-no-longer-read-from-the-dom).
 
 ### Font-Face
 

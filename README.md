@@ -12,7 +12,7 @@
 Install the package:
 
 ```sh
-npm install @studiometa/tailwind-config
+npm install --save-dev @studiometa/tailwind-config
 ```
 
 Add the configuration in your main css file after the import of Tailwind:
@@ -75,7 +75,7 @@ You can also divide your theme vars in separate files.
 
 ## Migration from Tailwind v3
 
-Coming from the old `tailwind.config.js` files ? Check out [our upgrade guide](./doc/upgrade-guide.md).
+Coming from the old `tailwind.config.js` files ? Check out [our upgrade guide](./doc/migration/v2-to-v3.md).
 
 ## Contributing
 
