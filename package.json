@@ -3,20 +3,11 @@
   "workspaces": [
     "packages/**/*"
   ],
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "A custom Tailwind CSS config",
   "private": true,
   "scripts": {
-    "lint": "eslint packages/",
-    "docs:dev": "npm run dev --workspace=@studiometa/tailwind-config-docs",
-    "docs:build": "npm run build --workspace=@studiometa/tailwind-config-docs",
     "tests:dev": "npm run dev --workspace=@studiometa/tailwind-config-tests",
     "tests:build": "npm run build --workspace=@studiometa/tailwind-config-tests"
-  },
-  "devDependencies": {
-    "@studiometa/eslint-config": "^2.1.3",
-    "@studiometa/prettier-config": "^2.1.1",
-    "eslint": "^7.32.0",
-    "prettier": "^2.7.1"
   }
 }

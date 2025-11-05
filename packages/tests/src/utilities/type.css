@@ -1,0 +1,17 @@
+@theme {
+  --type-size-h1: 4rem;
+  --type-height-h1: 1.2;
+  --type-weight-h1: 700;
+  --type-spacing-h1: -0.02em;
+
+  --type-size-h2: 3rem;
+  --type-height-h2: 1.2;
+  --type-weight-h2: 500;
+}
+
+@utility type-* {
+  font-size: --value(--type-size-*);
+  line-height: --value(--type-height-*);
+  font-weight: --value(--type-weight-*);
+  letter-spacing: --value(--type-spacing-*);
+}
