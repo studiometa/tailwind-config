@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+## [v3.0.0](https://github.com/studiometa/tailwind-config/pull/129) — 2025-11-05
+
 ### Added
 
 - Add .github/renovate.json (cc2fb8b)
