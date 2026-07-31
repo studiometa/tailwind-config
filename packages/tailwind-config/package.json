@@ -13,9 +13,8 @@
     "url": "https://github.com/studiometa/tailwind-config/issues"
   },
   "homepage": "https://github.com/studiometa/tailwind-config#readme",
-  "dependencies": {},
   "peerDependencies": {
-    "postcss": "^8.5.6",
+    "postcss": "^8.5.25",
     "tailwindcss": "^4.1.16"
   },
   "engines": {
