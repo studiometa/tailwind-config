@@ -27,7 +27,9 @@ jobs:
     outputs:
       version: ${{ steps.version.outputs.version }}
       prerelease: ${{ steps.version.outputs.prerelease }}
-      body: ${{ steps.changelog.outputs.body }}
+      dist-tag: ${{ steps.version.outputs.dist-tag }}
+      # A promotion has no fragment, so no changelog section: say what it promotes.
+      body: ${{ steps.changelog.outputs.changed == 'true' && steps.changelog.outputs.body || format('Stable release of {0}.', steps.version.outputs.previous) }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
@@ -44,13 +46,24 @@ jobs:
           BUMP: ${{ inputs.bump }}
           PREID: ${{ inputs.preid }}
         run: |
+          PREVIOUS=$(node -p 'require("./package.json").version')
           npm version "$BUMP" --preid "$PREID" --workspaces --include-workspace-root --no-workspaces-update --no-git-tag-version
           VERSION=$(node -p 'require("./package.json").version')
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "previous=$PREVIOUS" >> "$GITHUB_OUTPUT"
+          # A version with a prerelease part (1.2.0-beta.0) goes to the `next` dist-tag.
           if [[ $VERSION == *-* ]]; then
             echo "prerelease=true" >> "$GITHUB_OUTPUT"
+            echo "dist-tag=next" >> "$GITHUB_OUTPUT"
           else
             echo "prerelease=false" >> "$GITHUB_OUTPUT"
+            echo "dist-tag=latest" >> "$GITHUB_OUTPUT"
+          fi
+          # A stable version after a prerelease (1.2.0-rc.1 → 1.2.0) promotes it.
+          if [[ $PREVIOUS == *-* && $VERSION != *-* ]]; then
+            echo "promotion=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "promotion=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Fold changelog fragments
@@ -60,8 +73,10 @@ jobs:
           command: release
           version: v${{ steps.version.outputs.version }}
 
+      # The fragments of a prerelease are folded into its own section, so
+      # promoting it to a stable version can have no fragment.
       - name: Fail when there is nothing to release
-        if: steps.changelog.outputs.changed != 'true'
+        if: steps.changelog.outputs.changed != 'true' && steps.version.outputs.promotion != 'true'
         run: |
           echo "::error::No fragment in .changelog/: nothing to release."
           exit 1
@@ -79,6 +94,10 @@ jobs:
 
   # A tag pushed with GITHUB_TOKEN does not start other workflows, so publishing
   # runs in the same workflow, after the release job.
+  # npm trusted publishing (OIDC, no npm token) is bound to this file name: keep
+  # this job in publish-and-release.yml, and do not call it from another workflow.
+  # Each step is safe to replay: "Re-run failed jobs" skips a version that npm
+  # already has and updates a GitHub release that already exists.
   publish-and-release:
     needs: release
     runs-on: macos-latest
@@ -93,14 +112,14 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 24
-          registry-url: https://registry.npmjs.org/
 
-      - uses: JS-DevTools/npm-publish@19c28f1ef146469e409470805ea4279d47c3d35c # v3.1.1
+      - name: Publish @studiometa/tailwind-config
+        uses: JS-DevTools/npm-publish@0fd2f4369c5d6bcfcde6091a7c527d810b9b5c3f # v4.1.5
         with:
+          package: packages/tailwind-config
+          access: public
           provenance: true
-          package: packages/tailwind-config/
-          tag: ${{ needs.release.outputs.prerelease == 'true' && 'next' || 'latest' }}
-          token: ${{ secrets.NPM_TOKEN }}
+          tag: ${{ needs.release.outputs.dist-tag }}
 
       - uses: ncipollo/release-action@339a81892b84b4eeb0f6e744e4574d79d0d9b8dd # v1.21.0
         with:
@@ -109,3 +128,5 @@ jobs:
           body: ${{ needs.release.outputs.body }}
           draft: false
           prerelease: ${{ needs.release.outputs.prerelease }}
+          makeLatest: ${{ needs.release.outputs.prerelease == 'true' && 'false' || 'true' }}
+          allowUpdates: true

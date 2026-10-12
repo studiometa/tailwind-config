@@ -128,4 +128,8 @@ gh workflow run publish-and-release.yml -f bump=patch   # or minor / major
 gh workflow run publish-and-release.yml -f bump=prerelease -f preid=beta   # or prepatch / preminor / premajor
 ```
 
-Prereleases are published with the `next` npm tag.
+A version with a prerelease part (`3.1.0-beta.0`) is published with the `next` npm tag and marked as a prerelease on GitHub. Any other version is published with the `latest` npm tag and becomes the latest GitHub release.
+
+To promote a prerelease, run a `patch`, `minor` or `major` bump from it (`3.1.0-rc.1` → `3.1.0` with `-f bump=patch`). The fragments of the prerelease are already in its section of `CHANGELOG.md`, so this release can have no fragment: `CHANGELOG.md` then gets no new section, and the GitHub release body is `Stable release of 3.1.0-rc.1.` instead. Without a fragment, any other release fails with nothing to release.
+
+npm trusted publishing (OIDC) publishes the package: the workflow uses no npm token. It is bound to the `publish-and-release.yml` file name, so keep the publish job in this file. If the publish job fails, use "Re-run failed jobs": a version that npm already has is skipped, and a GitHub release that already exists is updated.
