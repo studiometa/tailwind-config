@@ -91,7 +91,7 @@ Coming from the old `tailwind.config.js` files ? Check out [our upgrade guide](.
 
 ## Contributing
 
-This project uses [Git Flow](https://github.com/petervanderdoes/gitflow-avh) as a branching model.
+Open pull requests against `main`.
 
 You can test the compilation using the following commands:
 
@@ -102,3 +102,30 @@ $ npm run test:dev
 # Build the test's assets
 $ npm run test:build
 ```
+
+### Changelog
+
+Do not edit `CHANGELOG.md`. Each pull request adds a fragment in `.changelog/<slug>.md`, where the slug is the branch name without its prefix (`feature/new-easing` → `new-easing.md`). A fragment only contains `### Added|Changed|Deprecated|Removed|Fixed|Security|Dependencies` headings, each followed by its entries:
+
+```markdown
+### Added
+
+- Add the `ease-in-out-back` easing
+
+### Fixed
+
+- Fix the value of the `3xl` breakpoint
+```
+
+Do not write the pull request number: the release adds it. A pull request that changes `packages/tailwind-config/` needs a fragment, unless it has the `no-changelog` label (tests, tooling). See [`weareikko/changelog`](https://github.com/weareikko/changelog) for the format.
+
+### Release
+
+Maintainers release with the `publish-and-release` workflow, from `main`. It bumps the version of all packages, folds the fragments into `CHANGELOG.md`, commits `Release <version>`, tags `<version>` (no `v` prefix), publishes to npm and creates the GitHub release:
+
+```bash
+gh workflow run publish-and-release.yml -f bump=patch   # or minor / major
+gh workflow run publish-and-release.yml -f bump=prerelease -f preid=beta   # or prepatch / preminor / premajor
+```
+
+Prereleases are published with the `next` npm tag.

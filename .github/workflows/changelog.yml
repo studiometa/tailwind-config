@@ -1,0 +1,23 @@
+name: changelog
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      # Every change to the published package needs a fragment in .changelog/,
+      # unless the pull request has the `no-changelog` label (tests, tooling).
+      - uses: weareikko/changelog@cb24219df8d46e3549a6fe5c10e06f9b01e5011e # 1.0.1
+        with:
+          command: check
+          require-paths: packages/tailwind-config/**
