@@ -117,15 +117,18 @@ Do not edit `CHANGELOG.md`. Each pull request adds a fragment in `.changelog/<sl
 - Fix the value of the `3xl` breakpoint
 ```
 
-Do not write the pull request number: the release adds it. A pull request that changes `packages/tailwind-config/` needs a fragment, unless it has the `no-changelog` label (tests, tooling). See [`weareikko/changelog`](https://github.com/weareikko/changelog) for the format.
+Do not write the pull request number: the release adds it as `([#N])`. A pull request that changes `packages/tailwind-config/` needs a fragment, unless it has the `no-changelog` label (tests, tooling) or comes from Renovate or Dependabot. See [`weareikko/changelog`](https://github.com/weareikko/changelog) for the format.
 
 ### Release
 
-Maintainers release with the `publish-and-release` workflow, from `main`. It bumps the version of all packages, folds the fragments into `CHANGELOG.md`, commits `Release <version>`, tags `<version>` (no `v` prefix), publishes to npm and creates the GitHub release:
+Each merge into `main` releases with the `publish-and-release` workflow. When `.changelog/` has fragments, the workflow computes the next version from them, folds them into `CHANGELOG.md`, sets the version of the root and of all workspaces, commits `Release <version>`, tags `<version>` (no `v` prefix), creates the GitHub release and publishes to npm. Renovate and Dependabot pull requests merged since the previous release become `Dependencies` entries. Without fragments and without bot pull requests, the workflow releases nothing.
+
+The version follows the entries: a breaking entry (`⚠️` or `Breaking:`) gives a major version, an `Added` entry a minor version, other entries a patch version. To force a bump, run the workflow by hand:
 
 ```bash
-gh workflow run publish-and-release.yml -f bump=patch   # or minor / major
-gh workflow run publish-and-release.yml -f bump=prerelease -f preid=beta   # or prepatch / preminor / premajor
+gh workflow run publish-and-release.yml -f version=major   # or minor / patch
 ```
 
-Prereleases are published with the `next` npm tag.
+To release prereleases, add a `.changelog/prerelease` file with one identifier (`alpha`, `beta` or `rc`): each merge then releases the next prerelease (`3.1.0-beta.0`), published with the `next` npm tag and marked as a prerelease on GitHub. Delete the file to release the stable version. See [Prereleases](https://github.com/weareikko/changelog#prereleases).
+
+npm trusted publishing (OIDC) publishes the package: the workflow uses no npm token. It is bound to the `publish-and-release.yml` file name, so keep the publish job in this file. If the publish job fails, use "Re-run failed jobs": a version that npm already has is skipped.
